@@ -1,0 +1,51 @@
+:root {
+  --primary-color: rgb(238, 108, 77);
+  --txt-color: #293241;
+  --bg-color: #f2f2f2;
+  --bg-content: #fff;
+  --nav-height: 70px;
+  --primary-hover: rgba(238, 108, 77, 0.8);
+  --btn-hover: rgb(210, 80, 50);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  padding-top: calc(var(--nav-height) + 30px);
+  font-size: 16px;
+}
+.container {
+  max-width: 1600px;
+  margin: 27px 150px 0 150px;
+}
+
+.box {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--bg-content);
+  box-shadow: var(--shadow);
+  padding: 15px;
+}
+.box-fill {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  padding: 15px;
+  cursor: pointer;
+}
+.box-fill:hover {
+  background-color: var(--btn-hover);
+}

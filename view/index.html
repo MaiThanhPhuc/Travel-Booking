@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/grid.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- top nav -->
+    <div class="top-nav">
+      <div class="container">
+        <div class="nav">
+          <div class="nav-content">
+            <a href="" class="logo">Travel Booking</a>
+            <div class="nav-menu">
+              <a href="" class="nav-menu__btn">Hỗ trợ</a>
+              <a href="" class="nav-menu__btn">Đăng kí</a>
+              <a href="" class="nav-menu__btn">Đăng nhập</a>
+            </div>
+          </div>
+          <div class="nav-mode">
+            <a href="" class="nav-mode__btn-hotel active-mode"> Khách sạn</a>
+            <a href="" class="nav-mode__btn-hotel"> Vé máy bay</a>
+            <a href="" class="nav-mode__btn-hotel"> Tour và sự kiện</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top nav -->
+
+    <!-- Main Content -->
+
+    <div class="container">
+      <!-- Search bar -->
+      <div class="row">
+        <div class="col-4">
+          <div class="box box-outline box-hover">
+            <div class="location-search" id="location-search">
+              <span
+                class="iconify location-search-icons"
+                data-icon="ci:location"
+              ></span>
+              <div class="location-search-list">
+                <label
+                  for="location-search-input"
+                  class="location-search-input__label"
+                  >Điểm đến</label
+                >
+                <input
+                  type="text"
+                  placeholder="Thành phố, khách sạn, điểm đến"
+                  id="location-search-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="box box-outline box-hover">
+            <div class="location-search" id="location-search">
+              <span
+                class="iconify location-search-icons"
+                data-icon="bx:bx-calendar-event"
+              ></span>
+              <div class="location-search-list">
+                <label
+                  for="location-search-input"
+                  class="location-search-input__label"
+                  >Nhận phòng</label
+                >
+                <div id="location-search-datein_btn">T5, 4 Tháng 11</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="box box-outline box-hover">
+            <div class="location-search" id="location-search">
+              <span
+                class="iconify location-search-icons"
+                data-icon="bx:bx-calendar-event"
+              ></span>
+              <div class="location-search-list">
+                <label
+                  for="location-search-input"
+                  class="location-search-input__label"
+                  >Trả phòng</label
+                >
+                <div id="location-search-dateout_btn">T7, 6 Tháng 11</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box box-outline box-hover">
+            <div class="location-search" id="location-search">
+              <span
+                class="iconify location-search-icons"
+                data-icon="mdi:human-male-male"
+              ></span>
+              <div class="location-search-list">
+                <label
+                  for="location-search-input"
+                  class="location-search-input__label"
+                  >Phòng người</label
+                >
+                <div id="location-search-people_btn">
+                  1 phòng, 2 người lớn, 0 trẻ em
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="box-fill btn-search">
+            <span
+              class="iconify location-search-icons__search"
+              data-icon="bytesize:search"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <!-- End search bar -->
+    </div>
+
+    <!-- End main content -->
+  </body>
+</html>

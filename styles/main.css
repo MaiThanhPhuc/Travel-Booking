@@ -1,0 +1,121 @@
+/* Top nav */
+.top-nav {
+  background-color: var(--bg-content);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+}
+.nav {
+  height: var(--nav-height);
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.nav-menu__btn:not(:last-child) {
+  margin-right: 32px;
+}
+.nav-menu__btn {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--txt-color);
+}
+.nav-mode {
+  position: absolute;
+  bottom: 0;
+  left: 100;
+  transform: translateY(-10%);
+}
+
+.nav-mode__btn-hotel {
+  position: relative;
+  margin-left: 50px;
+  color: var(--txt-color);
+}
+
+.nav-mode__btn-hotel::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.nav-mode__btn-hotel:hover {
+  color: var(--primary-hover);
+}
+.nav-mode__btn-hotel.active-mode::after,
+.nav-mode__btn-hotel:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+/* end top nav */
+
+/* Main content */
+
+/* Search bar */
+
+.location-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.location-search:hover .box-outline {
+  outline: 1px solid var(--primary-color);
+}
+.location-search-icons {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+}
+.location-search-input__label {
+  display: block;
+  color: var(--txt-color);
+  font-size: 12px;
+  font-weight: 300;
+}
+#location-search-input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 530;
+}
+#location-search-input:focus {
+  outline: none;
+}
+.location-search-list {
+  width: 100%;
+}
+.box-outline {
+  outline: 1px solid var(--txt-color);
+}
+.box:hover.box-outline {
+  outline: 2px solid var(--primary-color);
+}
+.location-search-icons__search {
+  height: 30px;
+  width: 30px;
+}
+.box-fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End search bar */
+
+/* End main content */
