@@ -58,7 +58,7 @@
 .nav-mode__btn-hotel:hover {
   color: var(--primary-hover);
 }
-.nav-mode__btn-hotel.active-mode::after,
+.nav-mode__btn-hotel.active::after,
 .nav-mode__btn-hotel:hover::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -73,6 +73,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .location-search:hover .box-outline {
   outline: 1px solid var(--primary-color);
@@ -82,29 +83,29 @@
   width: 30px;
   margin-right: 8px;
 }
-.location-search-input__label {
+.location-search__label {
   display: block;
   color: var(--txt-color);
   font-size: 12px;
   font-weight: 300;
 }
-#location-search-input {
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  font-weight: 530;
+
+#location-search-datein_btn,
+#location-search-dateout_btn,
+#location-search-people_btn {
+  font-size: 15px;
+  font-weight: 500;
 }
-#location-search-input:focus {
-  outline: none;
-}
-.location-search-list {
+.location-search-toggle {
   width: 100%;
+  position: relative;
 }
 .box-outline {
   outline: 1px solid var(--txt-color);
 }
+.box-outline.active,
 .box:hover.box-outline {
-  outline: 2px solid var(--primary-color);
+  outline: 2px solid rgb(241, 134, 107);
 }
 .location-search-icons__search {
   height: 30px;
@@ -116,6 +117,384 @@
   align-items: center;
 }
 
+.location-search-select-list {
+  position: absolute;
+  top: calc(100% + 25px);
+  left: -15px;
+  width: 110%;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 16px;
+  background-color: var(--bg-content);
+  z-index: 98;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: var(--txt-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.location-search-select-list.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.location-search-select-label {
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: 0.1px;
+}
+.location-search-select-wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 16px 12px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.location-search-select-wrapper:hover {
+  cursor: pointer;
+  background-color: rgb(233, 233, 233);
+}
+.location-search-select-wrapper__icons {
+  color: var(--txt-color);
+  width: 40px;
+  height: 40px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 5px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location-search-select-icons {
+  color: var(--txt-color);
+  width: 25px;
+  height: 25px;
+}
+.location-search-select-wrapper__content__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 2px 0px 4px 0px;
+}
+.location-search-select-wrapper__content__sub-title {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.location-search-select-people-number {
+  position: absolute;
+  top: calc(100% + 25px);
+  left: -15px;
+  width: 110%;
+  padding: 16px;
+  background-color: var(--bg-content);
+  z-index: 98;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: var(--txt-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  height: auto;
+}
+.location-search-select-people-number.active {
+  visibility: visible;
+  opacity: 1;
+}
+.location-search-select-people-number-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--txt-color);
+  padding: 4px 0px 8px 4px;
+}
+.location-search-select-people__label {
+  font-size: 15px;
+  font-weight: 500;
+}
+.location-search-select-people__btn {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.location-search-select-people__btn-sub,
+.location-search-select-people__btn-add {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.location-search-select-people-icon {
+  width: 25px;
+  height: 25px;
+}
+.location-search-select-people-age-child.box {
+  width: 50%;
+  font-size: 14px;
+}
+.location-search-select-people-number-wrapper__child {
+  visibility: hidden;
+  opacity: 0;
+}
+.location-search-select-people-number-wrapper__child.active {
+  visibility: visible;
+  opacity: 1;
+}
 /* End search bar */
+/* Body content */
+.body-content {
+  height: 2000px;
+}
+.box-map {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--bg-content);
+  box-shadow: var(--shadow);
+}
+
+.map-image {
+  border-radius: 10px 10px 0px 0px;
+  background-image: url(/images/map.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 120px;
+}
+.map-lable {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.line-spacing {
+  margin: 24px 0;
+  border-bottom: solid 1px rgba(41, 50, 65, 0.3);
+}
+.search-with-hotel-wrapper {
+  color: var(--txt-color);
+}
+.search-with-hotel-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.search-with-hotel-main {
+  display: flex;
+  align-items: center;
+}
+
+.search-with-hotel-main__icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.filter-product-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.filter-product-label {
+  font-size: 14px;
+  font-weight: 450;
+  margin: 20px 0px 16px 0px;
+}
+[id*="rank-"] + label,
+[id*="budget-"] + label,
+[id*="popular-"] + label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.filter-product-star-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.filter-product-star-wrapper input {
+  display: none;
+}
+.star-label-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  line-height: 50px;
+  cursor: pointer;
+}
+#star-1:checked ~ label[for="star-1"],
+#star-2:checked ~ label[for="star-2"],
+#star-3:checked ~ label[for="star-3"],
+#star-4:checked ~ label[for="star-4"],
+#star-5:checked ~ label[for="star-5"] {
+  background: var(--primary-color);
+  color: #fff;
+}
+.star-wrapper {
+  font-size: 14px;
+}
+.product-sort-select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-sort-select__label {
+  font-size: 12px;
+  font-weight: 300;
+}
+.product-sort-select__type {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.list-product-container {
+  width: 100%;
+}
+.product-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 98%;
+  margin: 12px 0px 12px 12px;
+}
+.product-container:hover {
+  cursor: pointer;
+}
+.product-container-img {
+  position: relative;
+}
+.product-img {
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  background-image: url(/images/hotel.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 210px;
+}
+.product-img-warapper-button {
+  display: flex;
+}
+.product-img-button-prev,
+.product-img-button-next {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgba(19, 20, 23, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product-img-button-prev {
+  left: 5%;
+}
+.product-img-button-next {
+  right: 5%;
+}
+.product-img-button-prev:hover,
+.product-img-button-next:hover {
+  cursor: pointer;
+  background-color: rgba(0, 11, 38, 0.72);
+}
+.product-img-button-icon {
+  color: #fff;
+  height: 15px;
+  width: 15px;
+}
+.product-container-info {
+  display: flex;
+  position: relative;
+}
+.product-info-header h2 {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.product-info-rank {
+  margin-top: 8px;
+}
+.product-info-rank__icon {
+  color: rgb(255, 223, 43);
+  width: 15px;
+  height: 15px;
+}
+.product-info-location {
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 450;
+  display: flex;
+  align-items: center;
+}
+.product-info-location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.product-info-special {
+  color: rgb(0, 133, 29);
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.product-info-special-icon {
+  width: 18px;
+  height: 18px;
+}
+.product-info-rate {
+  margin-top: 8px;
+}
+.product-info-price-warapper {
+  display: flex;
+}
+.product-info-price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-20%);
+}
+.product-info-price span {
+  position: inherit;
+  transform: translateX(100%);
+}
+.product-info-price__old {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.product-info-price__deal {
+  margin-left: 8px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.product-info-price__current {
+  font-size: 22px;
+  font-weight: 450;
+}
+.iconify.product-info-rank__icon {
+}
+/* end body content */
 
 /* End main content */

@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="nav-mode">
-            <a href="" class="nav-mode__btn-hotel active-mode"> Khách sạn</a>
+            <a href="" class="nav-mode__btn-hotel active"> Khách sạn</a>
             <a href="" class="nav-mode__btn-hotel"> Vé máy bay</a>
             <a href="" class="nav-mode__btn-hotel"> Tour và sự kiện</a>
           </div>
@@ -44,86 +44,287 @@
     <div class="container">
       <!-- Search bar -->
       <div class="row">
-        <div class="col-4">
-          <div class="box box-outline box-hover">
+        <div class="col-4 col-md-4 col-sm-12">
+          <div class="box box-outline">
             <div class="location-search" id="location-search">
               <span
                 class="iconify location-search-icons"
                 data-icon="ci:location"
               ></span>
-              <div class="location-search-list">
+              <div class="location-search-toggle">
                 <label
                   for="location-search-input"
-                  class="location-search-input__label"
+                  class="location-search__label"
                   >Điểm đến</label
                 >
                 <input
+                  class="location-search-input input"
                   type="text"
                   placeholder="Thành phố, khách sạn, điểm đến"
                   id="location-search-input"
                 />
               </div>
+              <div class="location-search-select-list">
+                <div class="location-search-select-label">Địa điểm nổi bật</div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="ci:location"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Đà nẵng
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Địa điểm
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="icon-park-outline:hotel"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Sheraton
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Khách sạn
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="icon-park-outline:hotel"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Amannoi
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Khu nghỉ dưỡng
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="ci:location"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Đà nẵng
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Địa điểm
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="ci:location"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Đà nẵng
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Địa điểm
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-wrapper">
+                  <div class="location-search-select-wrapper__icons">
+                    <span
+                      class="iconify location-search-select-icons"
+                      data-icon="ci:location"
+                    ></span>
+                  </div>
+                  <div class="location-search-select-wrapper__content">
+                    <div class="location-search-select-wrapper__content__title">
+                      Đà nẵng
+                    </div>
+                    <div
+                      class="location-search-select-wrapper__content__sub-title"
+                    >
+                      Địa điểm
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-2 col-md-2 col-sm-6">
           <div class="box box-outline box-hover">
             <div class="location-search" id="location-search">
               <span
                 class="iconify location-search-icons"
                 data-icon="bx:bx-calendar-event"
               ></span>
-              <div class="location-search-list">
+              <div class="location-search-toggle">
                 <label
                   for="location-search-input"
-                  class="location-search-input__label"
+                  class="location-search__label"
                   >Nhận phòng</label
                 >
-                <div id="location-search-datein_btn">T5, 4 Tháng 11</div>
+                <div id="location-search-datein_btn">4 Thg 11</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-2 col-md-2 col-sm-6">
           <div class="box box-outline box-hover">
             <div class="location-search" id="location-search">
               <span
                 class="iconify location-search-icons"
                 data-icon="bx:bx-calendar-event"
               ></span>
-              <div class="location-search-list">
+              <div class="location-search-toggle">
                 <label
                   for="location-search-input"
-                  class="location-search-input__label"
+                  class="location-search__label"
                   >Trả phòng</label
                 >
-                <div id="location-search-dateout_btn">T7, 6 Tháng 11</div>
+                <div id="location-search-dateout_btn">6 Thg 11</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 col-md-3 col-sm-12">
           <div class="box box-outline box-hover">
             <div class="location-search" id="location-search">
               <span
                 class="iconify location-search-icons"
                 data-icon="mdi:human-male-male"
               ></span>
-              <div class="location-search-list">
+              <div class="location-search-toggle">
                 <label
                   for="location-search-input"
-                  class="location-search-input__label"
+                  class="location-search__label"
                   >Phòng người</label
                 >
-                <div id="location-search-people_btn">
-                  1 phòng, 2 người lớn, 0 trẻ em
+                <div
+                  id="location-search-people_btn"
+                  class="location-search-people_btn"
+                >
+                  1 phòng, 2 người
+                </div>
+              </div>
+              <div class="location-search-select-people-number">
+                <div class="location-search-select-people-number-wrapper">
+                  <div class="location-search-select-people__label">Phòng</div>
+                  <div class="location-search-select-people__btn">
+                    <div class="location-search-select-people__btn-sub">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="carbon:subtract-alt"
+                      ></span>
+                    </div>
+                    <div class="location-search-select-people__count">1</div>
+                    <div class="location-search-select-people__btn-add">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="fluent:add-circle-24-regular"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-people-number-wrapper">
+                  <div class="location-search-select-people__label">
+                    Người lớn
+                  </div>
+                  <div class="location-search-select-people__btn">
+                    <div class="location-search-select-people__btn-sub">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="carbon:subtract-alt"
+                      ></span>
+                    </div>
+                    <div class="location-search-select-people__count">1</div>
+                    <div class="location-search-select-people__btn-add">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="fluent:add-circle-24-regular"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-search-select-people-number-wrapper">
+                  <div class="location-search-select-people__label">Trẻ em</div>
+                  <div class="location-search-select-people__btn">
+                    <div class="location-search-select-people__btn-sub">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="carbon:subtract-alt"
+                      ></span>
+                    </div>
+                    <div class="location-search-select-people__count">1</div>
+                    <div class="location-search-select-people__btn-add">
+                      <span
+                        class="iconify location-search-select-people-icon"
+                        data-icon="fluent:add-circle-24-regular"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="location-search-select-people-number-wrapper__child"
+                >
+                  <select
+                    name=""
+                    id="location-search-select-people-age-child"
+                    class="location-search-select-people-age-child box"
+                  >
+                    <option value="0">Dưới 1 tuổi</option>
+                    <option value="1">1 tuổi</option>
+                    <option value="2">2 tuổi</option>
+                    <option value="3">3 tuổi</option>
+                    <option value="4">4 tuổi</option>
+                    <option value="5">5 tuổi</option>
+                    <option value="6">6 tuổi</option>
+                    <option value="7">7 tuổi</option>
+                    <option value="8">8 tuổi</option>
+                    <option value="9">9 tuổi</option>
+                    <option value="10">10 tuổi</option>
+                    <option value="11">11 tuổi</option>
+                    <option value="12">12 tuổi</option>
+                    <option value="13">13 tuổi</option>
+                    <option value="14">14 tuổi</option>
+                    <option value="15">15 tuổi</option>
+                    <option value="16">16 tuổi</option>
+                    <option value="17">17 tuổi</option>
+                  </select>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-1">
-          <div class="box-fill btn-search">
+        <div class="col-1 col-md-1 col-sm-12">
+          <div class="box-fill btn-search box-outline">
             <span
               class="iconify location-search-icons__search"
               data-icon="bytesize:search"
@@ -133,6 +334,778 @@
       </div>
       <!-- End search bar -->
     </div>
+
+    <!-- body content -->
+
+    <div class="body-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="row">
+              <div class="col-12">
+                <div class="box-map">
+                  <div class="map-wrapper">
+                    <div class="map-image"></div>
+                    <div class="map-lable">Bản đồ</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="line-spacing"></div>
+              </div>
+              <div class="col-12">
+                <div class="search-with-hotel-wrapper">
+                  <div class="search-with-hotel-label">
+                    Tìm kiếm theo tên khách sạn
+                  </div>
+                  <div class="box box-outline search-with-hotel-main">
+                    <div class="search-with-hotel-main-container-icon">
+                      <span
+                        class="iconify search-with-hotel-main__icon"
+                        data-icon="carbon:search"
+                      ></span>
+                    </div>
+                    <div class="search-with-hotel-main-container-input">
+                      <input
+                        class="search-with-hotel-main__input input"
+                        type="text"
+                        placeholder="VD: Sheraton"
+                        id="search-with-hotel-main__input"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="line-spacing"></div>
+              </div>
+              <div class="col-12">
+                <div class="filter-product-container">
+                  <div class="filter-product-header">Lọc theo</div>
+                  <div class="filter-product-label">Bộ lọc phổ biến</div>
+                  <div class="filter-product-popular-wrapper">
+                    <input type="checkbox" id="popular-1" value="hotel" />
+                    <label for="popular-1">Khách sạn</label><br />
+                    <input type="checkbox" id="popular-2" value="all" />
+                    <label for="popular-2">Trọn gói</label><br />
+                    <input type="checkbox" id="popular-3" value="breakfast" />
+                    <label for="popular-3">Bao gồm bữa sáng</label><br />
+                    <input type="checkbox" id="popular-4" value="view_beach" />
+                    <label for="popular-4">Quang cảnh biển</label><br />
+                    <input type="checkbox" id="popular-5" value="pool" />
+                    <label for="popular-5">Hồ bơi</label><br />
+                  </div>
+                  <div class="filter-product-label">Xếp hạng sao</div>
+                  <div class="filter-product-star-wrapper">
+                    <div class="filter-product-star-wrapper-input">
+                      <input type="checkbox" id="star-1" value="one" />
+                      <label class="star-label-input" for="star-1"
+                        ><span class="star-wrapper"> 1★ </span>
+                      </label>
+                    </div>
+                    <div class="filter-product-star-wrapper-input">
+                      <input type="checkbox" id="star-2" value="one" />
+                      <label class="star-label-input" for="star-2"
+                        ><span class="star-wrapper"> 2★ </span>
+                      </label>
+                    </div>
+                    <div class="filter-product-star-wrapper-input">
+                      <input type="checkbox" id="star-3" value="one" />
+                      <label class="star-label-input" for="star-3"
+                        ><span class="star-wrapper"> 3★ </span>
+                      </label>
+                    </div>
+                    <div class="filter-product-star-wrapper-input">
+                      <input type="checkbox" id="star-4" value="one" />
+                      <label class="star-label-input" for="star-4"
+                        ><span class="star-wrapper"> 4★ </span>
+                      </label>
+                    </div>
+                    <div class="filter-product-star-wrapper-input">
+                      <input type="checkbox" id="star-5" value="one" />
+                      <label class="star-label-input" for="star-5"
+                        ><span class="star-wrapper"> 5★ </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter-product-label">Ngân sách</div>
+                  <div class="filter-product-budget-wrapper">
+                    <input type="checkbox" id="budget-1" value="under_1m" />
+                    <label for="budget-1">Dưới 1.000.000 ₫</label><br />
+                    <input type="checkbox" id="budget-2" value="1m_to_2m" />
+                    <label for="budget-2">1.000.000 ₫ đến 2.000.000 ₫</label
+                    ><br />
+                    <input type="checkbox" id="budget-3" value="2m_to_5m" />
+                    <label for="budget-3">2.000.000 ₫ đến 5.000.000 ₫</label
+                    ><br />
+                    <input type="checkbox" id="budget-4" value="5m_to_10m" />
+                    <label for="budget-4">5.000.000 ₫ đến 10.000.000 ₫</label
+                    ><br />
+                    <input type="checkbox" id="budget-5" value="over_10m" />
+                    <label for="budget-5">Hơn 10.00.000 ₫</label><br />
+                  </div>
+                  <div class="filter-product-label">Xếp hạng của khách</div>
+                  <div class="filter-product-rank-wrapper">
+                    <div class="filter-product-rank-radio">
+                      <input
+                        type="radio"
+                        id="rank-1"
+                        name="rank"
+                        value="any"
+                        checked
+                      />
+                      <label for="rank-1">Bất kỳ</label><br />
+                    </div>
+                    <div class="filter-product-rank-radio">
+                      <input
+                        type="radio"
+                        id="rank-2"
+                        name="rank"
+                        value="over_4.5"
+                      />
+                      <label for="rank-2">Tuyệt vời 4.5 +</label><br />
+                    </div>
+                    <div class="filter-product-rank-radio">
+                      <input
+                        type="radio"
+                        id="rank-3"
+                        name="rank"
+                        value="over_4"
+                      />
+                      <label for="rank-3">Rất tốt 4 +</label><br />
+                    </div>
+                    <div class="filter-product-rank-radio">
+                      <input
+                        type="radio"
+                        id="rank-4"
+                        name="rank"
+                        value="over_3"
+                      />
+                      <label for="rank-4">Tốt 3 +</label><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <div class="col-7"></div>
+              <div class="col-5">
+                <div class="box box-outline">
+                  <div class="product-sort-select-wrapper">
+                    <div class="product-sort-select-content">
+                      <div class="product-sort-select__label">
+                        Sắp xếp theo thứ tự
+                      </div>
+                      <div class="product-sort-select__type">Đề xuất</div>
+                    </div>
+                    <div class="product-sort-select-icons">
+                      <span
+                        class="iconify"
+                        data-icon="bytesize:chevron-bottom"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-product-container">
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="product-1" class="product-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="product-container-img">
+                        <div class="product-img"></div>
+                        <div class="product-img-warapper-button">
+                          <div class="product-img-button-prev">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-left"
+                            ></span>
+                          </div>
+                          <div class="product-img-button-next">
+                            <span
+                              class="iconify product-img-button-icon"
+                              data-icon="akar-icons:chevron-right"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-8">
+                      <div class="product-container-info">
+                        <div class="product-container-info-main">
+                          <div class="product-info-header">
+                            <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                          </div>
+
+                          <div class="product-info-rank">
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                            <span
+                              class="iconify product-info-rank__icon"
+                              data-icon="carbon:star-filled"
+                            ></span>
+                          </div>
+                          <div class="product-info-location">
+                            <span
+                              class="iconify product-info-location-icon"
+                              data-icon="ci:location"
+                            ></span>
+                            <span> Languna Lăng Cô </span>
+                          </div>
+                          <div class="product-info-special-warapper">
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Quang cảnh biển </span>
+                            </div>
+                            <div class="product-info-special">
+                              <span
+                                class="iconify product-info-special-icon"
+                                data-icon="akar-icons:check"
+                              ></span>
+                              <span> Có hồ bơi riêng </span>
+                            </div>
+                          </div>
+                          <div class="product-info-rate">
+                            <strong>9/10</strong> Tuyệt vời
+                            <span>(200 đánh giá)</span>
+                          </div>
+                        </div>
+
+                        <div class="product-container-info-price">
+                          <div class="product-info-price">
+                            <div class="product-info-price-warapper">
+                              <div class="product-info-price__old">
+                                12.000.000 ₫
+                              </div>
+                              <div class="product-info-price__deal">-15%</div>
+                            </div>
+                            <div class="product-info-price__current">
+                              10.000.000 ₫
+                            </div>
+                            <span>Mỗi đêm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end body content -->
 
     <!-- End main content -->
   </body>
