@@ -324,6 +324,11 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  -webkit-user-select: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
 }
 .filter-product-star-wrapper input {
   display: none;
