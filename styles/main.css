@@ -38,6 +38,7 @@
   position: relative;
   margin-left: 50px;
   color: var(--txt-color);
+  -webkit-user-select: none;
 }
 
 .nav-mode__btn-hotel::after {
@@ -68,7 +69,8 @@
 /* Main content */
 
 /* Search bar */
-
+.room-people,
+.date-picker,
 .location-search {
   display: flex;
   align-items: center;
@@ -78,24 +80,26 @@
 .location-search:hover .box-outline {
   outline: 1px solid var(--primary-color);
 }
-.location-search-icons {
+.search-bar-icons {
   height: 30px;
   width: 30px;
   margin-right: 8px;
 }
-.location-search__label {
+.search-bar__label {
   display: block;
   color: var(--txt-color);
   font-size: 12px;
   font-weight: 300;
 }
 
-#location-search-datein_btn,
-#location-search-dateout_btn,
-#location-search-people_btn {
+#date-picker-datein_btn,
+#date-picker-dateout_btn,
+#room-people_btn {
   font-size: 15px;
   font-weight: 500;
 }
+.date-picker-search-toggle,
+.room-people-search-toggle,
 .location-search-toggle {
   width: 100%;
   position: relative;
@@ -107,7 +111,7 @@
 .box:hover.box-outline {
   outline: 2px solid rgb(241, 134, 107);
 }
-.location-search-icons__search {
+.search-bar-icons__search {
   height: 30px;
   width: 30px;
 }
@@ -127,7 +131,7 @@
   padding: 16px;
   background-color: var(--bg-content);
   z-index: 98;
-  box-shadow: var(--shadow);
+  box-shadow: 0px 3px 3px var(--shadow);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   color: var(--txt-color);
@@ -188,7 +192,7 @@
   font-weight: 400;
 }
 
-.location-search-select-people-number {
+.room-people-number {
   position: absolute;
   top: calc(100% + 25px);
   left: -15px;
@@ -196,7 +200,7 @@
   padding: 16px;
   background-color: var(--bg-content);
   z-index: 98;
-  box-shadow: var(--shadow);
+  box-shadow: 0px 3px 3px var(--shadow);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   color: var(--txt-color);
@@ -205,29 +209,29 @@
   transition: all 0.3s ease-in-out;
   height: auto;
 }
-.location-search-select-people-number.active {
+.room-people-number.active {
   visibility: visible;
   opacity: 1;
 }
-.location-search-select-people-number-wrapper {
+.room-people-number-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--txt-color);
   padding: 4px 0px 8px 4px;
 }
-.location-search-select-people__label {
+.room-people__label {
   font-size: 15px;
   font-weight: 500;
 }
-.location-search-select-people__btn {
+.room-people__btn {
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.location-search-select-people__btn-sub,
-.location-search-select-people__btn-add {
+.room-people__btn-sub,
+.room-people__btn-add {
   width: 30px;
   height: 30px;
   display: flex;
@@ -235,19 +239,29 @@
   align-items: center;
   cursor: pointer;
 }
-.location-search-select-people-icon {
+.room-people-icon {
   width: 25px;
   height: 25px;
 }
-.location-search-select-people-age-child.box {
+.room-people-age-child.box {
   width: 50%;
   font-size: 14px;
 }
-.location-search-select-people-number-wrapper__child {
+.room-people-number-warning {
+  display: none;
+  color: #fff;
+  background-color: rgb(245, 49, 49);
+}
+.room-people-number-warning.active {
+  display: block;
+}
+.room-people-number-wrapper__child {
+  display: none;
   visibility: hidden;
   opacity: 0;
 }
-.location-search-select-people-number-wrapper__child.active {
+.room-people-number-wrapper__child.active {
+  display: block;
   visibility: visible;
   opacity: 1;
 }
@@ -260,7 +274,7 @@
   width: 100%;
   border-radius: 10px;
   background-color: var(--bg-content);
-  box-shadow: var(--shadow);
+  box-shadow: 0px 3px 3px var(--shadow);
 }
 
 .map-image {
@@ -370,6 +384,41 @@ input:focus {
   font-size: 15px;
   font-weight: 400;
 }
+.product-sort-select-container {
+  position: relative;
+}
+.product-sort-select-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 4px;
+  width: 97%;
+  background-color: var(--bg-content);
+  z-index: 98;
+  box-shadow: 0px 3px 3px var(--shadow);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: var(--txt-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.product-sort-select-list.active {
+  visibility: visible;
+  opacity: 1;
+}
+.product-sort-select-list__item {
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px 0px 4px 16px;
+}
+.product-sort-select-list__item:hover {
+  background-color: rgb(175, 175, 175);
+}
 
 .list-product-container {
   width: 100%;
@@ -430,6 +479,7 @@ input:focus {
 .product-container-info {
   display: flex;
   position: relative;
+  margin-left: 5px;
 }
 .product-info-header h2 {
   margin-top: 12px;
