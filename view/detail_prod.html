@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/grid.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- top nav -->
+    <div class="top-nav">
+      <div class="container">
+        <div class="nav">
+          <div class="nav-content">
+            <a href="" class="logo">Travel Booking</a>
+            <div class="nav-menu">
+              <a href="" class="nav-menu__btn">Hỗ trợ</a>
+              <a href="" class="nav-menu__btn">Đăng kí</a>
+              <a href="" class="nav-menu__btn">Đăng nhập</a>
+            </div>
+          </div>
+          <div id="nav-mode" class="nav-mode">
+            <span href="" class="nav-mode__btn-hotel active">Khách sạn</span>
+            <span href="" class="nav-mode__btn-hotel">Vé máy bay</span>
+            <span href="" class="nav-mode__btn-hotel">Tour và sự kiện</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top nav -->
+    <!-- main content -->
+    <div class="container">
+      <!-- image-container -->
+      <div class="row">
+        <div class="col-12">
+          <div class="room-heading-container">
+            <div class="room-heading">
+              <h2>Áp mái view thung lũng đồi</h2>
+              <div class="room-heading-btn">
+                <div class="box-fill">Đặt phòng ngay</div>
+              </div>
+            </div>
+            <div class="room-subheading">
+              <span
+                class="iconify room-subheading--star"
+                data-icon="bx:bxs-star"
+              ></span>
+              <div class="room-rating">
+                <strong> 9/10 Tuyệt vời </strong
+                ><a class="room-rating__count" href="">(50 đánh giá)</a>
+              </div>
+              <span class="point-between">·</span>
+              <div class="room-addr">
+                <a href="" class="room-addr__city">Thành phố Đà Lạt</a>
+              </div>
+            </div>
+          </div>
+          <div class="box box-image">
+            <div class="image-container">
+              <div class="row">
+                <div class="col-6 image__bigsize-wrapper">
+                  <div class="image__bigsize">
+                    <img src="/images/bigsize.jpg" alt="bigsize image" />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-6 image__small-wrapper">
+                      <div class="image-sub__smallsize">
+                        <img src="/images/small_1.jpg" alt="smallsize image" />
+                      </div>
+                    </div>
+                    <div class="col-6 image__small-wrapper">
+                      <div class="image-sub__smallsize child_2">
+                        <img src="/images/small_2.jpg" alt="smallsize image" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 image__small-wrapper">
+                      <div class="image-sub__smallsize">
+                        <img src="/images/small_3.jpg" alt="smallsize image" />
+                      </div>
+                    </div>
+                    <div class="col-6 image__small-wrapper last-img">
+                      <div class="image-sub__smallsize">
+                        <img src="/images/small_1.jpg" alt="smallsize image" />
+                      </div>
+                      <div class="image-sub_smallsize--btn">
+                        <span
+                          class="iconify"
+                          data-icon="ion:images-outline"
+                        ></span>
+                        <span class="image--count"> 18+ </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="room-content-container">
+            <div class="room-content__heading">
+              <h3>Phòng tại khách sạn Boutique. Chủ nhà Hà</h3>
+            </div>
+            <div class="room-content__sub-heading">
+              2 Khách · 1 phòng ngủ · 1 giường · 1 phòng tắm
+            </div>
+            <div class="line-spacing"></div>
+            <div class="room-content__amenities-container">
+              <div class="room-content__amenities-heading">
+                <h4>Tiện nghi</h4>
+              </div>
+              <div class="room-content__amenities-wrapper">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="amenities-wrapper">
+                      <span class="iconify" data-icon="bx:bx-wifi"></span>
+                      <span class="amenities-label">Miễn phí wifi</span>
+                    </div>
+                    <div class="amenities-wrapper">
+                      <span
+                        class="iconify"
+                        data-icon="ic:outline-local-laundry-service"
+                      ></span>
+                      <span class="amenities-label">Dịch vụ giặt là</span>
+                    </div>
+                    <div class="amenities-wrapper">
+                      <span class="iconify" data-icon="bi:snow"></span>
+                      <span class="amenities-label">Điều hoà</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="amenities-wrapper">
+                      <span class="iconify" data-icon="bx:bx-wifi"></span>
+                      <span class="amenities-label">Miễn phí wifi</span>
+                    </div>
+                    <div class="amenities-wrapper">
+                      <span
+                        class="iconify"
+                        data-icon="ic:outline-local-laundry-service"
+                      ></span>
+                      <span class="amenities-label">Dịch vụ giặt là</span>
+                    </div>
+                    <div class="amenities-wrapper">
+                      <span class="iconify" data-icon="bi:snow"></span>
+                      <span class="amenities-label">Điều hoà</span>
+                    </div>
+                  </div>
+                  <div class="col-4 room-content--btn">
+                    <div class="box box-outline">Hiển thị tất cả tiện ích</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line-spacing"></div>
+            <div class="room-content__des">
+              Phòng đơn có góc nhìn từ trên đồi
+            </div>
+            <div class="line-spacing"></div>
+            <div class="room-content__inroom-container">
+              <div class="room-content__inroom-heading">
+                <h4>Phòng của bạn</h4>
+              </div>
+              <div class="row room-content__inroom-items">
+                <div class="col-1"></div>
+                <div class="col-3 room-content__inroom-wrapper">
+                  <div class="room-content__inroom-bed">
+                    <span
+                      class="iconify"
+                      data-icon="icon-park-outline:double-bed"
+                      data-width="35"
+                      data-height="35"
+                    ></span>
+                    <div class="room-content__inroom-bed--heading">
+                      Phòng ngủ
+                    </div>
+                    <div class="room-content__inroom-bed--type">
+                      1 giường queen
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 room-content__inroom-wrapper">
+                  <div class="room-content__inroom-bed">
+                    <span
+                      class="iconify"
+                      data-icon="bx:bx-area"
+                      data-width="35"
+                      data-height="35"
+                    ></span>
+                    <div class="room-content__inroom-area--heading">
+                      Diện tích
+                    </div>
+                    <div class="room-content__inroom-area--count">
+                      22 mét vuông
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-5 box-move">
+          <div class="box booking-box-container">
+            <div class="booking-box-heading">
+              <div class="booking-box-heading__price">
+                <h3>760.000₫</h3>
+              </div>
+
+              <div class="booking-box-heading__rate">
+                <span
+                  class="iconify room-subheading--star"
+                  data-icon="bx:bxs-star"
+                ></span>
+                <div class="room-rating">
+                  <strong> 9/10 Tuyệt vời </strong>
+                  <a class="room-rating__count" href="">(50 đánh giá)</a>
+                </div>
+              </div>
+            </div>
+            <div class="booking-box-info">
+              <div class="booking-box-date-container">
+                <div class="booking-box-date--checkin">
+                  <div class="booking-box-checkin-wrapper">
+                    <label
+                      for="booking-box-checkin"
+                      class="booking-box-checkin__label"
+                      >NHẬN PHÒNG</label
+                    >
+                    <input
+                      type="text"
+                      id="booking-box-checkin"
+                      class="booking-box-checkin__input"
+                      placeholder="Thêm ngày"
+                    />
+                  </div>
+                  <div class="booking-box-checkin__remove active">
+                    <span class="iconify" data-icon="bi:x"></span>
+                  </div>
+                </div>
+                <div class="booking-box-date--checkout">
+                  <div class="booking-box-checkout-wrapper">
+                    <label
+                      for="booking-box-checkout"
+                      class="booking-box-checkout__label"
+                      >TRẢ PHÒNG</label
+                    >
+                    <input
+                      type="text"
+                      id="booking-box-checkout"
+                      class="booking-box-checkout__input"
+                      placeholder="Thêm ngày"
+                    />
+                  </div>
+                  <div class="booking-box-checkout__remove">
+                    <span class="iconify" data-icon="bi:x"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-guests-container">
+                <label
+                  class="booking-box-guests--label"
+                  for="booking-box-guests-input"
+                  >KHÁCH</label
+                >
+                <input
+                  value="2 khách"
+                  type="text"
+                  id="booking-box-guests--input"
+                  class="booking-box-guests--input"
+                  disabled
+                />
+                <div class="booking-box-guests-number">
+                  <div class="booking-box-guests-number-warning box active">
+                    Vui lòng nhập tuổi trẻ em.
+                  </div>
+                  <div class="booking-box-guests-number-wrapper">
+                    <div class="booking-box-guests__label">Phòng</div>
+                    <div class="booking-box-guests__btn">
+                      <div class="booking-box-guests__btn-sub">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="carbon:subtract-alt"
+                        ></span>
+                      </div>
+                      <div
+                        id="booking-box-guests__count--room"
+                        class="booking-box-guests__count--room"
+                      >
+                        1
+                      </div>
+                      <div class="booking-box-guests__btn-add">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="fluent:add-circle-24-regular"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-box-guests-number-wrapper">
+                    <div class="booking-box-guests__label">Người lớn</div>
+                    <div class="booking-box-guests__btn">
+                      <div class="booking-box-guests__btn-sub">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="carbon:subtract-alt"
+                        ></span>
+                      </div>
+                      <div
+                        id="booking-box-guests__count--adult"
+                        class="booking-box-guests__count--adult"
+                      >
+                        1
+                      </div>
+                      <div class="booking-box-guests__btn-add">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="fluent:add-circle-24-regular"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-box-guests-number-wrapper">
+                    <div class="booking-box-guests__label">Trẻ em</div>
+                    <div class="booking-box-guests__btn">
+                      <div class="booking-box-guests__btn-sub">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="carbon:subtract-alt"
+                        ></span>
+                      </div>
+                      <div
+                        id="booking-box-guests__count--child"
+                        class="booking-box-guests__count--child"
+                      >
+                        1
+                      </div>
+                      <div class="booking-box-guests__btn-add">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="fluent:add-circle-24-regular"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="booking-box-guests-number-wrapper__child">
+                    <select
+                      name=""
+                      id="booking-box-guests-age-child"
+                      class="booking-box-guests-age-child box"
+                    >
+                      <option value="0">Dưới 1 tuổi</option>
+                      <option value="1">1 tuổi</option>
+                      <option value="2">2 tuổi</option>
+                      <option value="3">3 tuổi</option>
+                      <option value="4">4 tuổi</option>
+                      <option value="5">5 tuổi</option>
+                      <option value="6">6 tuổi</option>
+                      <option value="7">7 tuổi</option>
+                      <option value="8">8 tuổi</option>
+                      <option value="9">9 tuổi</option>
+                      <option value="10">10 tuổi</option>
+                      <option value="11">11 tuổi</option>
+                      <option value="12">12 tuổi</option>
+                      <option value="13">13 tuổi</option>
+                      <option value="14">14 tuổi</option>
+                      <option value="15">15 tuổi</option>
+                      <option value="16">16 tuổi</option>
+                      <option value="17">17 tuổi</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking-box-btn box-fill">Đặt phòng</div>
+            <div class="booking-box-price-container">
+              <div class="booking-box-price-wrapper">
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__room-price">760.000₫</span>
+                  x
+                  <span class="booking-box-price__days">2 đêm</span>
+                </div>
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__room-price-total"
+                    >1.520.000₫</span
+                  >
+                </div>
+              </div>
+              <div class="booking-box-price-wrapper">
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__fee-service"
+                    >Phí dịch vụ</span
+                  >
+                </div>
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__fee-service-total"
+                    >100.000₫</span
+                  >
+                </div>
+              </div>
+              <div class="booking-box-price-wrapper__discount">
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__discount"
+                    >Giãm giá theo tuần</span
+                  >
+                </div>
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__discount-total"
+                    >-380.000₫</span
+                  >
+                </div>
+              </div>
+              <div class="line-spacing"></div>
+              <div class="booking-box-price-wrapper">
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__total-label">Tổng</span>
+                </div>
+                <div class="booking-box-price__label">
+                  <span class="booking-box-price__total">1.620.000₫</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="line-spacing"></div>
+        </div>
+      </div>
+      <!-- end image container -->
+    </div>
+
+    <!-- end main content -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>
