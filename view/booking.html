@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/grid.css" />
+    <link rel="stylesheet" href="/styles/booking.css" />
+  </head>
+  <body>
+    <!-- top nav -->
+    <div class="top-nav">
+      <div class="container">
+        <div class="nav">
+          <div class="nav-content">
+            <a href="" class="logo">Travel Booking</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top nav -->
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <div class="booking-content-container">
+            <div class="booking-content-heading">
+              <div class="booking-content-heading__icons">
+                <span
+                  class="iconify"
+                  data-icon="akar-icons:chevron-left"
+                ></span>
+              </div>
+              <h1>Xác nhận và thanh toán</h1>
+            </div>
+            <div id="booking-trip" class="booking-content-wrapper">
+              <div class="booking-content-wrapper--heading">
+                Thông tin chuyến đi
+              </div>
+              <div class="booking-content-wrapper--block">
+                <div class="booking-content-wrapper--block--left">
+                  <div class="booking-content-wrapper--block--left__heading">
+                    Ngày
+                  </div>
+                  <div
+                    class="booking-content-wrapper--block--left__subheading"
+                    id="booking-date"
+                  >
+                    14 thg 11 – 21 thg 11
+                  </div>
+                </div>
+                <div class="booking-content-wrapper--block--right">
+                  <a href=""> Chỉnh sửa </a>
+                </div>
+              </div>
+              <div class="booking-content-wrapper--block">
+                <div class="booking-content-wrapper--block--left">
+                  <div class="booking-content-wrapper--block--left__heading">
+                    Giờ nhận phòng
+                  </div>
+                  <div
+                    class="booking-content-wrapper--block--left__subheading"
+                    id="booking-time"
+                  >
+                    22:00 – 00:00
+                  </div>
+                </div>
+                <div class="booking-content-wrapper--block--right">
+                  <a href=""> Chỉnh sửa </a>
+                </div>
+              </div>
+              <div class="booking-content-wrapper--block">
+                <div class="booking-content-wrapper--block--left">
+                  <div class="booking-content-wrapper--block--left__heading">
+                    Khách
+                  </div>
+                  <div
+                    class="booking-content-wrapper--block--left__subheading"
+                    id="booking-guess"
+                  >
+                    1 khách
+                  </div>
+                </div>
+                <div class="booking-content-wrapper--block--right">
+                  <a href=""> Chỉnh sửa </a>
+                </div>
+              </div>
+            </div>
+            <div class="line-space"></div>
+            <div id="booking-payment" class="booking-content-wrapper">
+              <div class="booking-content-wrapper--heading">
+                Phương thức thanh toán
+              </div>
+              <div class="box-outline booking-payment-select">
+                <div class="booking-payment-select-left">
+                  <span
+                    class="iconify"
+                    data-icon="bi:credit-card"
+                    data-width="35"
+                    data-height="35"
+                  ></span>
+                  <div class="booking-payment-select__text">
+                    Thẻ tín dụng hoặc thẻ ghi nợ
+                  </div>
+                </div>
+                <span
+                  class="iconify booking-payment-select-icon-down"
+                  data-icon="akar-icons:chevron-down"
+                  data-width="23"
+                  data-height="23"
+                ></span>
+              </div>
+              <div class="booking-card-container">
+                <div
+                  class="
+                    booking-card__number-card-wrapper
+                    booking-input-wrapper
+                  "
+                >
+                  <label class="booking-label" for="booking-card__number-card"
+                    >Số thẻ</label
+                  >
+                  <input
+                    type="text"
+                    name="booking-card__number-card"
+                    id="booking-card__number-card"
+                    required
+                    class="booking-input"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                </div>
+                <div class="booking-card__expiration-cvv">
+                  <div
+                    class="
+                      booking-card__expiration-wrapper
+                      booking-input-wrapper
+                    "
+                  >
+                    <label class="booking-label" for="booking-card__expiration"
+                      >Ngày hết hạn</label
+                    >
+                    <input
+                      class="booking-input"
+                      type="text"
+                      name="booking-card__expiration"
+                      id="booking-card__expiration"
+                      required
+                      placeholder="MM/YY"
+                    />
+                  </div>
+                  <div class="booking-card__cvv-wrapper booking-input-wrapper">
+                    <label class="booking-label" for="booking-card__cvv"
+                      >CVV</label
+                    >
+                    <input
+                      class="booking-input"
+                      type="text"
+                      name="booking-card__cvv"
+                      id="booking-card__cvv"
+                      required
+                      placeholder="123"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-zipcode-container">
+                <div class="booking-input-wrapper booking-zipcode-wrapper">
+                  <label class="booking-label" for="booking-zipcode"
+                    >ZIP code</label
+                  >
+                  <input
+                    type="text"
+                    name="booking-zipcode"
+                    id="booking-zipcode"
+                    required
+                    class="booking-input"
+                  />
+                </div>
+              </div>
+              <div class="booking-country-container">
+                <div class="booking-input-wrapper booking-country-wrapper">
+                  <div class="booking-country-left">
+                    <label class="booking-label" for="booking-country"
+                      >Country/region</label
+                    >
+                    <input
+                      type="text"
+                      name="booking-country"
+                      id="booking-country"
+                      required
+                      class="booking-input"
+                      disabled
+                      value="Viet Nam"
+                    />
+                  </div>
+                  <div class="booking-country-right">
+                    <span
+                      class="iconify booking-payment-select-icon-down"
+                      data-icon="akar-icons:chevron-down"
+                      data-width="23"
+                      data-height="23"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line-space"></div>
+            <div id="booking-guess-info" class="booking-content-wrapper">
+              <div class="booking-content-wrapper--heading">
+                Thông tin liên hệ
+              </div>
+              <div class="booking-input-wrapper booking-guess-phone-wrapper">
+                <label class="booking-label" for="booking-guess-phone"
+                  >Số điện thoại</label
+                >
+                <input
+                  type="text"
+                  name="booking-guess-phone"
+                  id="booking-guess-phone"
+                  required
+                  class="booking-input"
+                  placeholder="012345678"
+                />
+              </div>
+              <div class="booking-input-wrapper booking-guess-email-wrapper">
+                <label class="booking-label" for="booking-guess-email"
+                  >Email</label
+                >
+                <input
+                  type="text"
+                  name="booking-guess-email"
+                  id="booking-guess-email"
+                  required
+                  class="booking-input"
+                  placeholder="travelbooking@email.com"
+                />
+              </div>
+            </div>
+            <div class="line-space"></div>
+            <div class="booking-content-wrapper">
+              <div class="booking-content-wrapper--heading">Chính sách hủy</div>
+              <div class="booking-canceled-wrapper">
+                <ul>
+                  <li>
+                    Hủy trước 14:00 ngày 20 thg 11 để được hoàn lại 50% trừ đêm
+                    đầu tiên và phí dịch vụ. <a href="">Tìm hiểu thêm</a>
+                  </li>
+                  <li>
+                    Chính sách trường hợp bất khả kháng của chúng tôi không áp
+                    dụng cho các trường hợp gián đoạn đi lại do COVID-19 gây ra.
+                    <a href="">Tìm hiểu thêm</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="line-space"></div>
+            <div class="booking-content-wrapper">
+              <div class="booking-term">
+                Bằng việc chọn nút bên dưới, tôi đồng ý với
+                <a href=""> Nội quy nhà của Chủ nhà </a> ,
+                <a href=""
+                  >Các yêu cầu về an toàn trong đại dịch COVID-19 của Airbnb</a
+                >
+                và <a href=""> Chính sách hoàn tiền cho khách.</a>
+              </div>
+            </div>
+            <div class="booking-content-wrapper">
+              <div class="booking-btn-pay">Xác nhận & thanh toán</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 booking-move-container">
+          <div class="booking-move-wrapper">
+            <div class="booking-move-heading-wrapper">
+              <div class="booking-move-heading__image">
+                <img src="/images/bigsize.jpg" alt="" />
+              </div>
+              <div class="booking-move-heading__content">
+                <span class="booking-move-heading__content-heading"
+                  >Room in boutique hotel in Thành phố Đà Lạt</span
+                >
+                <div class="booking-move-heading__content-subheading">
+                  <span>Áp mái view thung lũng đồi</span>
+                  <span>1 phòng ngủ · 1 phòng tắm</span>
+                </div>
+                <div class="booking-move-heading__content-footer">
+                  <div class="booking-move-heading__content-footer-left">
+                    <span
+                      class="iconify booking-subheading--star"
+                      data-icon="bx:bxs-star"
+                      style="color: #ee6c4d"
+                    ></span>
+                    <div class="booking-rating">
+                      <strong> 9/10 </strong>
+                      (50 đánh giá)
+                    </div>
+                  </div>
+                  <div class="booking-move-heading__content-footer-right">
+                    <span
+                      class="iconify"
+                      data-icon="ri:medal-2-fill"
+                      style="color: #ee6c4d"
+                    ></span>
+                    <span class="room-hosted-details-left-feature-item-name"
+                      >Siêu chủ nhà</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line-space"></div>
+            <div class="booking-move-price-detail-wrapper">
+              <div class="booking-move-price-detail-heading">Chi tiết giá</div>
+              <div class="booking-move-price-detail-content">
+                <div class="booking-move-price-detail-content-wrapper">
+                  <div class="booking-move-price__label">
+                    <span class="booking-move-price__room-price">760.000₫</span>
+                    x
+                    <span class="booking-move-price__days">2 đêm</span>
+                  </div>
+                  <div class="booking-box-price__label">
+                    <span class="booking-box-price__room-price-total"
+                      >1.520.000₫</span
+                    >
+                  </div>
+                </div>
+                <div class="booking-move-price-detail-content-wrapper">
+                  <div class="booking-move-price__label">
+                    <span class="booking-move-price__fee-service"
+                      >Phí dịch vụ</span
+                    >
+                  </div>
+                  <div class="booking-box-price__label">
+                    <span class="booking-box-price__fee-service-total"
+                      >100.000₫</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="
+                    booking-move-price-detail-content-wrapper
+                    none_discount
+                  "
+                >
+                  <div class="booking-move-price__label">
+                    <span class="booking-move-price__discount">Giảm giá</span>
+                  </div>
+                  <div class="booking-box-price__label">
+                    <span class="booking-box-price__discount-total"
+                      >-380.000₫</span
+                    >
+                  </div>
+                </div>
+                <div class="booking-move-price-detail-content-wrapper">
+                  <div class="booking-move-price__label">
+                    <span class="booking-move-price__total">Tổng</span>
+                  </div>
+                  <div class="booking-box-price__label">
+                    <span class="booking-box-price__total-total"
+                      >1.620.000₫</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer"></footer>
+</html>
