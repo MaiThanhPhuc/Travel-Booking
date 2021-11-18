@@ -412,31 +412,14 @@
                     </div>
                     <div class="filter-product-label">Loại phòng</div>
                     <div class="filter-product-room-type-wrapper">
-                      <input
-                          type="checkbox"
-                          id="type-1"
-                          value="any"
-                          
-                        />
-                        <label for="type-1">Phòng riêng</label><br />
-                      <input
-                          type="checkbox"
-                          id="type-2"
-                          value="any"
-                        />
-                        <label for="type-2">Nguyên căn</label><br />
-                      <input
-                          type="checkbox"
-                          id="type-3"
-                          value="any"
-                        />
-                        <label for="type-3">Khách sạn</label><br />
-                      <input
-                          type="checkbox"
-                          id="type-4"
-                          value="any"
-                        />
-                        <label for="type-4">Homestay</label><br />
+                      <input type="checkbox" id="type-1" value="any" />
+                      <label for="type-1">Phòng riêng</label><br />
+                      <input type="checkbox" id="type-2" value="any" />
+                      <label for="type-2">Nguyên căn</label><br />
+                      <input type="checkbox" id="type-3" value="any" />
+                      <label for="type-3">Khách sạn</label><br />
+                      <input type="checkbox" id="type-4" value="any" />
+                      <label for="type-4">Homestay</label><br />
                     </div>
                     <div class="filter-product-label">Xếp hạng sao</div>
                     <div class="filter-product-star-wrapper">
@@ -527,16 +510,13 @@
                         <label for="rank-4">Tốt 3 +</label><br />
                       </div>
                     </div>
-                    <button class="
-                     filter-product-btn">
-                    Lưu</button>
+                    <button class="filter-product-btn">Lưu</button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-9">
               <div class="row">
-                
                 <div class="list-product-container">
                   <div id="product-1" class="product-container">
                     <a href="#">
@@ -544,7 +524,7 @@
                         <div class="col-4">
                           <div class="product-container-img">
                             <div class="product-img">
-                              <img src="/images/hotel.jpg" alt="">
+                              <img src="/images/hotel.jpg" alt="" />
                             </div>
                           </div>
                         </div>
@@ -584,7 +564,7 @@
                                 <span> Languna Lăng Cô </span>
                               </div>
                               <div class="product-info-room-type">
-                                Phòng tại khách sạn 
+                                Phòng tại khách sạn
                               </div>
                               <div class="product-info-rate">
                                 <strong>9/10</strong> Tuyệt vời
@@ -614,8 +594,6 @@
                       </div>
                     </a>
                   </div>
-                  
-                  
                 </div>
               </div>
             </div>
@@ -630,20 +608,20 @@
     <script src="/js/main.js"></script>
     <script src="/node_modules/moment/moment.js"></script>
     <script>
-       var format = "DD-MM-YYYY";
+      var format = "DD-MM-YYYY";
       var today = moment();
       today.subtract(1, "days").format(format);
       const disallowedDates = [["2001-01-01", today]];
       new Litepicker({
-        element: document.getElementById('check_in'),
-        elementEnd: document.getElementById('check_out'),
+        element: document.getElementById("check_in"),
+        elementEnd: document.getElementById("check_out"),
         singleMode: false,
-        
+
         numberOfColumns: 2,
         numberOfMonths: 2,
         format: "DD/MM/YYYY",
         lockDays: disallowedDates,
-        
+
         tooltipText: {
           one: "night",
           other: "nights",
@@ -651,7 +629,7 @@
         tooltipNumber: (totalDays) => {
           return totalDays;
         },
-      })
+      });
     </script>
     <!-- <script>
       var picker = new Lightpick({

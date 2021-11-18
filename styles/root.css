@@ -7,15 +7,15 @@
   --primary-hover: rgba(238, 108, 77, 0.8);
   --btn-hover: rgba(210, 80, 50);
   --shadow: rgba(0, 0, 0, 0.1);
-  --litepicker-button-prev-month-color-hover: #ee6c4d !important;--litepicker-button-next-month-color-hover: #ee6c4d !important;
+  --litepicker-button-prev-month-color-hover: #ee6c4d !important;
+  --litepicker-button-next-month-color-hover: #ee6c4d !important;
   --litepicker-day-color-hover: #ee6c4d !important;
-  --litepicker-is-today-color: #e71405;
-  --litepicker-is-in-range-color: #f7b3a2;
+  --litepicker-is-today-color: #0251fc !important;
+  --litepicker-is-in-range-color: #f7b3a2 !important;
   --litepicker-is-start-color-bg: #ee6c4d !important ;
   --litepicker-is-end-color-bg: #ee6c4d !important;
   --litepicker-button-apply-color-bg: #ee6c4d !important;
   --litepicker-button-reset-color-hover: #ee6c4d !important;
-  
 }
 
 * {

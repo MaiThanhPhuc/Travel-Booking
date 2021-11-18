@@ -307,7 +307,8 @@
               <div class="booking-move-price-detail-heading">Chi tiết giá</div>
               <div class="booking-move-price-detail-content">
                 <div class="booking-move-price-detail-content-wrapper">
-                  <div class="booking-move-price__label">$<div id="booking-move-price__room-price">15</div>
+                  <div class="booking-move-price__label">
+                    $<span id="booking-move-price__room-price">15</span>
                     x
                     <div id="booking-move-price__days">2 đêm</div>
                   </div>
@@ -322,7 +323,7 @@
                     >
                   </div>
                   <div class="booking-box-price__label">
-                    $<div id="booking-box-price__fee-service-total">5</div>
+                    $<span id="booking-box-price__fee-service-total">5</span>
                   </div>
                 </div>
                 <div
@@ -334,14 +335,17 @@
                   <div class="booking-move-price__label">
                     <span class="booking-move-price__discount">Giảm giá</span>
                   </div>
-                  <div class="booking-box-price__label">$<div id="booking-box-price__discount-total">-10</div>
+                  <div class="booking-box-price__label">
+                    $
+                    <div id="booking-box-price__discount-total">-10</div>
                   </div>
                 </div>
                 <div class="booking-move-price-detail-content-wrapper">
                   <div class="booking-move-price__label">
                     <span class="booking-move-price__total">Tổng</span>
                   </div>
-                  <div class="booking-box-price__label">$<span id="booking-box-price__total-total">35</span>
+                  <div class="booking-box-price__label">
+                    $<span id="booking-box-price__total-total">35</span>
                   </div>
                 </div>
               </div>
@@ -357,7 +361,7 @@
       var format = "DD-MM-YYYY";
       var today = moment();
       today.subtract(1, "days").format(format);
-      
+
       const disallowedDates = [["2001-01-01", today]];
       var picker = new Litepicker({
         element: document.getElementById("booking-checkin"),
@@ -392,10 +396,14 @@
             document.getElementById("booking-move-price__room-price").innerHTML
           );
           var fee = parseFloat(
-            document.getElementById("booking-box-price__fee-service-total").innerHTML
+            document.getElementById("booking-box-price__fee-service-total")
+              .innerHTML
           );
-            document.getElementById("booking-box-price__total-total").innerHTML=price_room*(diffInDays+1)+fee;
-            document.getElementById("booking-box-price__room-price-total").innerHTML=price_room*(diffInDays+1);
+          document.getElementById("booking-box-price__total-total").innerHTML =
+            price_room * (diffInDays + 1) + fee;
+          document.getElementById(
+            "booking-box-price__room-price-total"
+          ).innerHTML = price_room * (diffInDays + 1);
         });
       });
     </script>
