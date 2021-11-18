@@ -12,6 +12,11 @@
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/node_modules/lightpick/css/lightpick.css"
+    />
     <link rel="stylesheet" href="/styles/root.css" />
     <link rel="stylesheet" href="/styles/grid.css" />
     <link rel="stylesheet" href="/styles/main.css" />
@@ -47,9 +52,9 @@
           <div class="room-heading-container">
             <div class="room-heading">
               <h2>Áp mái view thung lũng đồi</h2>
-              <div class="room-heading-btn">
+              <a href="#booking-box-container" class="room-heading-btn">
                 <div class="box-fill">Đặt phòng ngay</div>
-              </div>
+              </a>
             </div>
             <div class="room-subheading">
               <span
@@ -58,7 +63,7 @@
               ></span>
               <div class="room-rating">
                 <strong> 9/10 Tuyệt vời </strong
-                ><a class="room-rating__count" href="">(50 đánh giá)</a>
+                ><a class="room-rating__count" href="#room-review-container">(50 đánh giá)</a>
               </div>
               <span class="point-between">·</span>
               <div class="room-addr">
@@ -237,10 +242,10 @@
         </div>
 
         <div class="col-5 box-move">
-          <div class="box booking-box-container">
+          <div id="booking-box-container" class="box booking-box-container ">
             <div class="booking-box-heading">
               <div class="booking-box-heading__price">
-                <h3>760.000₫</h3>
+                <h3>761.000₫</h3>
               </div>
 
               <div class="booking-box-heading__rate">
@@ -293,50 +298,28 @@
                   </div>
                 </div>
               </div>
-              <div class="booking-box-guests-container">
+              <div id="booking-box-guests" class="booking-box-guests-container">
                 <label
                   class="booking-box-guests--label"
-                  for="booking-box-guests-input"
+                  for="booking-box-guests--input"
                   >KHÁCH</label
                 >
                 <input
-                  value="2 khách"
+                  value="1 khách"
                   type="text"
                   id="booking-box-guests--input"
                   class="booking-box-guests--input"
                   disabled
                 />
-                <div class="booking-box-guests-number">
-                  <div class="booking-box-guests-number-warning box active">
+                <div class="booking-box-guests-number ">
+                  <div class="booking-box-guests-number-warning">
                     Vui lòng nhập tuổi trẻ em.
                   </div>
-                  <div class="booking-box-guests-number-wrapper">
-                    <div class="booking-box-guests__label">Phòng</div>
-                    <div class="booking-box-guests__btn">
-                      <div class="booking-box-guests__btn-sub">
-                        <span
-                          class="iconify booking-box-guests-icon"
-                          data-icon="carbon:subtract-alt"
-                        ></span>
-                      </div>
-                      <div
-                        id="booking-box-guests__count--room"
-                        class="booking-box-guests__count--room"
-                      >
-                        1
-                      </div>
-                      <div class="booking-box-guests__btn-add">
-                        <span
-                          class="iconify booking-box-guests-icon"
-                          data-icon="fluent:add-circle-24-regular"
-                        ></span>
-                      </div>
-                    </div>
-                  </div>
+                 
                   <div class="booking-box-guests-number-wrapper">
                     <div class="booking-box-guests__label">Người lớn</div>
                     <div class="booking-box-guests__btn">
-                      <div class="booking-box-guests__btn-sub">
+                      <div class="booking-box-guests__btn-adult-sub">
                         <span
                           class="iconify booking-box-guests-icon"
                           data-icon="carbon:subtract-alt"
@@ -345,10 +328,8 @@
                       <div
                         id="booking-box-guests__count--adult"
                         class="booking-box-guests__count--adult"
-                      >
-                        1
-                      </div>
-                      <div class="booking-box-guests__btn-add">
+                      >1</div>
+                      <div class="booking-box-guests__btn-adult-add">
                         <span
                           class="iconify booking-box-guests-icon"
                           data-icon="fluent:add-circle-24-regular"
@@ -359,7 +340,7 @@
                   <div class="booking-box-guests-number-wrapper">
                     <div class="booking-box-guests__label">Trẻ em</div>
                     <div class="booking-box-guests__btn">
-                      <div class="booking-box-guests__btn-sub">
+                      <div class="booking-box-guests__btn-child-sub">
                         <span
                           class="iconify booking-box-guests-icon"
                           data-icon="carbon:subtract-alt"
@@ -368,10 +349,8 @@
                       <div
                         id="booking-box-guests__count--child"
                         class="booking-box-guests__count--child"
-                      >
-                        1
-                      </div>
-                      <div class="booking-box-guests__btn-add">
+                      >0</div>
+                      <div class="booking-box-guests__btn-child-add">
                         <span
                           class="iconify booking-box-guests-icon"
                           data-icon="fluent:add-circle-24-regular"
@@ -379,14 +358,14 @@
                       </div>
                     </div>
                   </div>
-
+                  
                   <div class="booking-box-guests-number-wrapper__child">
                     <select
-                      name=""
+                      name="booking-child-age"
                       id="booking-box-guests-age-child"
-                      class="booking-box-guests-age-child box"
+                      class="booking-box-guests-age-child"
                     >
-                      <option value="0">Dưới 1 tuổi</option>
+                      <option selected value="0">Dưới 1 tuổi</option>
                       <option value="1">1 tuổi</option>
                       <option value="2">2 tuổi</option>
                       <option value="3">3 tuổi</option>
@@ -409,7 +388,7 @@
                 </div>
               </div>
             </div>
-            <div class="booking-box-btn box-fill">Đặt phòng</div>
+            <button class="booking-box-btn box-fill">Đặt phòng</button>
             <div class="booking-box-price-container">
               <div class="booking-box-price-wrapper">
                 <div class="booking-box-price__label">
@@ -528,7 +507,7 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="room-review-container">
+          <div id="room-review-container" class="room-review-container">
             <div class="row">
               <div class="col-4 room-review-wrapper">
                 <div class="room-review-average-score-wrapper">
@@ -989,7 +968,21 @@
     </div>
 
     <!-- end main content -->
-    <script src="/js/main.js"></script>
+    <script src="/js/detail_prod.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="/node_modules/lightpick/lightpick.js"></script>
+    <script>
+      var picker = new Lightpick({
+        field: document.getElementById("booking-box-checkin"),
+        secondField: document.getElementById("booking-box-checkout"),
+        singleDate: false,
+        onSelect: function (start, end) {
+          var str = "";
+          str += start ? start.format("Do MMMM YYYY") + " to " : "";
+          str += end ? end.format("Do MMMM YYYY") : "...";
+        },
+      });
+    </script>
   </body>
   <footer class="footer"></footer>
 </html>

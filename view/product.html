@@ -11,7 +11,13 @@
     />
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/node_modules/lightpick/css/lightpick.css"
+    />
     <!-- CSS -->
+
     <link rel="stylesheet" href="/styles/root.css" />
     <link rel="stylesheet" href="/styles/grid.css" />
     <link rel="stylesheet" href="/styles/main.css" />
@@ -27,8 +33,8 @@
               <a href="" class="logo">Travel Booking</a>
               <div class="nav-menu">
                 <a href="" class="nav-menu__btn">Hỗ trợ</a>
-                <a href="" class="nav-menu__btn">Đăng kí</a>
-                <a href="" class="nav-menu__btn">Đăng nhập</a>
+                <a href="/view/login.html" class="nav-menu__btn">Đăng kí</a>
+                <a href="/view/login.html" class="nav-menu__btn">Đăng nhập</a>
               </div>
             </div>
             <div id="nav-mode" class="nav-mode">
@@ -67,11 +73,17 @@
                     class
                   />
                 </div>
-                <div class="location-search-select-list">
+                <div
+                  id="location-search-select-list"
+                  class="location-search-select-list"
+                >
                   <div class="location-search-select-label">
                     Địa điểm nổi bật
                   </div>
-                  <div class="location-search-select-wrapper">
+                  <button
+                    id="location-search-suggest-1"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -92,8 +104,11 @@
                         Địa điểm
                       </div>
                     </div>
-                  </div>
-                  <div class="location-search-select-wrapper">
+                  </button>
+                  <button
+                    id="location-search-suggest-2"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -114,8 +129,11 @@
                         Khách sạn
                       </div>
                     </div>
-                  </div>
-                  <div class="location-search-select-wrapper">
+                  </button>
+                  <button
+                    id="location-search-suggest-3"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -136,8 +154,11 @@
                         Khu nghỉ dưỡng
                       </div>
                     </div>
-                  </div>
-                  <div class="location-search-select-wrapper">
+                  </button>
+                  <button
+                    id="location-search-suggest-4"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -158,8 +179,11 @@
                         Địa điểm
                       </div>
                     </div>
-                  </div>
-                  <div class="location-search-select-wrapper">
+                  </button>
+                  <button
+                    id="location-search-suggest-5"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -180,8 +204,11 @@
                         Địa điểm
                       </div>
                     </div>
-                  </div>
-                  <div class="location-search-select-wrapper">
+                  </button>
+                  <button
+                    id="location-search-suggest-6"
+                    class="location-search-select-wrapper"
+                  >
                     <div class="location-search-select-wrapper__icons">
                       <span
                         class="iconify location-search-select-icons"
@@ -202,40 +229,55 @@
                         Địa điểm
                       </div>
                     </div>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-2 col-md-2 col-sm-6">
-            <div class="box box-outline box-hover">
-              <div class="date-picker" id="date-picker">
+            <div class="date-picker">
+              <span
+                class="iconify search-bar-icons_date"
+                data-icon="bx:bx-calendar-event"
+              ></span>
+              <div class="date-picker-search-toggle">
                 <span
-                  class="iconify search-bar-icons"
+                  class="iconify search-bar-icons_date"
                   data-icon="bx:bx-calendar-event"
+                  data-height="25"
+                  data-width="25"
                 ></span>
-                <div class="date-picker-search-toggle">
-                  <label for="date-picker-datein_btn" class="search-bar__label"
-                    >Nhận phòng</label
-                  >
-                  <div id="date-picker-datein_btn">4 Thg 11</div>
-                </div>
+                <label for="check_in" class="search-bar__label_date"
+                  >Nhận phòng</label
+                >
+                <input
+                  placeholder="dd/mm/yyyy"
+                  value="c"
+                  class="date-picker-input-date"
+                  type="text"
+                  id="check_in"
+                />
               </div>
             </div>
           </div>
           <div class="col-2 col-md-2 col-sm-6">
-            <div class="box box-outline box-hover">
-              <div class="date-picker" id="date-picker">
-                <span
-                  class="iconify search-bar-icons"
-                  data-icon="bx:bx-calendar-event"
-                ></span>
-                <div class="date-picker-toggle">
-                  <label for="date-picker-dateout_btn" class="search-bar__label"
-                    >Trả phòng</label
-                  >
-                  <div id="date-picker-dateout_btn">6 Thg 11</div>
-                </div>
+            <div class="date-picker">
+              <span
+                class="iconify search-bar-icons_date"
+                data-icon="bx:bx-calendar-event"
+                data-height="25"
+                data-width="25"
+              ></span>
+              <div class="date-picker-toggle">
+                <label for="check_out" class="search-bar__label_date"
+                  >Trả phòng</label
+                >
+                <input
+                  placeholder="dd/mm/yyyy"
+                  class="date-picker-input-date"
+                  type="text"
+                  id="check_out"
+                />
               </div>
             </div>
           </div>
@@ -248,43 +290,24 @@
                 ></span>
                 <div class="room-people-search-toggle">
                   <label for="room-people_btn" class="search-bar__label"
-                    >Phòng người</label
+                    >Số người</label
                   >
-                  <div id="room-people_btn" class="room-people_btn">
-                    1 phòng, 2 người
-                  </div>
+                  <input
+                    disabled
+                    type="text"
+                    value="1 Khách"
+                    id="room-people_btn"
+                    class="room-people_btn"
+                  />
                 </div>
                 <div class="room-people-number">
-                  <div class="room-people-number-warning box">
+                  <div class="room-people-number-warning">
                     Vui lòng nhập tuổi trẻ em.
-                  </div>
-                  <div class="room-people-number-wrapper">
-                    <div class="room-people__label">Phòng</div>
-                    <div class="room-people__btn">
-                      <div class="room-people__btn-sub">
-                        <span
-                          class="iconify room-people-icon"
-                          data-icon="carbon:subtract-alt"
-                        ></span>
-                      </div>
-                      <div
-                        id="room-people__count--room"
-                        class="room-people__count--room"
-                      >
-                        1
-                      </div>
-                      <div class="room-people__btn-add">
-                        <span
-                          class="iconify room-people-icon"
-                          data-icon="fluent:add-circle-24-regular"
-                        ></span>
-                      </div>
-                    </div>
                   </div>
                   <div class="room-people-number-wrapper">
                     <div class="room-people__label">Người lớn</div>
                     <div class="room-people__btn">
-                      <div class="room-people__btn-sub">
+                      <div class="room-people__btn-adult-sub">
                         <span
                           class="iconify room-people-icon"
                           data-icon="carbon:subtract-alt"
@@ -296,7 +319,7 @@
                       >
                         1
                       </div>
-                      <div class="room-people__btn-add">
+                      <div class="room-people__btn-adult-add">
                         <span
                           class="iconify room-people-icon"
                           data-icon="fluent:add-circle-24-regular"
@@ -307,7 +330,7 @@
                   <div class="room-people-number-wrapper">
                     <div class="room-people__label">Trẻ em</div>
                     <div class="room-people__btn">
-                      <div class="room-people__btn-sub">
+                      <div class="room-people__btn-child-sub">
                         <span
                           class="iconify room-people-icon"
                           data-icon="carbon:subtract-alt"
@@ -317,9 +340,9 @@
                         id="room-people__count--child"
                         class="room-people__count--child"
                       >
-                        1
+                        0
                       </div>
-                      <div class="room-people__btn-add">
+                      <div class="room-people__btn-child-add">
                         <span
                           class="iconify room-people-icon"
                           data-icon="fluent:add-circle-24-regular"
@@ -329,11 +352,10 @@
                   </div>
                   <div class="room-people-number-wrapper__child">
                     <select
-                      name=""
-                      id="room-people-age-child"
-                      class="room-people-age-child box"
+                      name="quantity_people"
+                      class="room-people-age-child"
                     >
-                      <option value="0">Dưới 1 tuổi</option>
+                      <option selected value="0">Dưới 1 tuổi</option>
                       <option value="1">1 tuổi</option>
                       <option value="2">2 tuổi</option>
                       <option value="3">3 tuổi</option>
@@ -358,12 +380,12 @@
             </div>
           </div>
           <div class="col-1 col-md-1 col-sm-12">
-            <div class="box-fill btn-search box-outline">
+            <button class="box-fill btn-search box-outline">
               <span
                 class="iconify search-bar-icons__search"
                 data-icon="bytesize:search"
               ></span>
-            </div>
+            </button>
           </div>
         </div>
         <!-- End search bar -->
@@ -377,62 +399,20 @@
             <div class="col-3">
               <div class="row">
                 <div class="col-12">
-                  <div class="box-map">
+                  <button class="box-map">
                     <div class="map-wrapper">
                       <div class="map-image"></div>
                       <div class="map-lable">Bản đồ</div>
                     </div>
-                  </div>
+                  </button>
                 </div>
-                <div class="col-12">
-                  <div class="line-spacing"></div>
-                </div>
-                <div class="col-12">
-                  <div class="search-with-hotel-wrapper">
-                    <div class="search-with-hotel-label">
-                      Tìm kiếm theo tên khách sạn
-                    </div>
-                    <div class="box box-outline search-with-hotel-main">
-                      <div class="search-with-hotel-main-container-icon">
-                        <span
-                          class="iconify search-with-hotel-main__icon"
-                          data-icon="carbon:search"
-                        ></span>
-                      </div>
-                      <div class="search-with-hotel-main-container-input">
-                        <input
-                          class="search-with-hotel-main__input input"
-                          type="text"
-                          placeholder="VD: Sheraton"
-                          id="search-with-hotel-main__input"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="col-12">
                   <div class="line-spacing"></div>
                 </div>
                 <div class="col-12">
                   <div class="filter-product-container">
                     <div class="filter-product-header">Lọc theo</div>
-                    <div class="filter-product-label">Bộ lọc phổ biến</div>
-                    <div class="filter-product-popular-wrapper">
-                      <input type="checkbox" id="popular-1" value="hotel" />
-                      <label for="popular-1">Khách sạn</label><br />
-                      <input type="checkbox" id="popular-2" value="all" />
-                      <label for="popular-2">Trọn gói</label><br />
-                      <input type="checkbox" id="popular-3" value="breakfast" />
-                      <label for="popular-3">Bao gồm bữa sáng</label><br />
-                      <input
-                        type="checkbox"
-                        id="popular-4"
-                        value="view_beach"
-                      />
-                      <label for="popular-4">Quang cảnh biển</label><br />
-                      <input type="checkbox" id="popular-5" value="pool" />
-                      <label for="popular-5">Hồ bơi</label><br />
-                    </div>
                     <div class="filter-product-label">Xếp hạng sao</div>
                     <div class="filter-product-star-wrapper">
                       <div class="filter-product-star-wrapper-input">
@@ -529,160 +509,200 @@
             <div class="col-9">
               <div class="row">
                 <div class="col-7"></div>
-                <div class="col-5 product-sort-select-container">
-                  <div class="box box-outline">
-                    <div id="product-sort" class="product-sort-select-wrapper">
-                      <div class="product-sort-select-content">
-                        <div class="product-sort-select__label">
-                          Sắp xếp theo thứ tự
-                        </div>
-                        <div
-                          id="product-sort-mode"
-                          class="product-sort-select__type"
-                        >
-                          Đề xuất
-                        </div>
-                      </div>
-                      <div class="product-sort-select-icons">
-                        <span
-                          class="iconify"
-                          data-icon="bytesize:chevron-bottom"
-                        ></span>
-                      </div>
-                    </div>
+                <form class="col-5 product-sort-select-container">
+                  <div id="product-sort" class="product-sort-select-wrapper">
+                    <label class="product-sort-select__label" for="sort">
+                      Sắp xếp theo thứ tự
+                    </label>
+                    <select name="sort" id="sort">
+                      <option selected value="recommended">Đề xuất</option>
+                      <option value="price_low_to_high">Giá tăng dần</option>
+                      <option value="price_high_to_low">Giá giãm dần</option>
+                      <option value="property_class">Xếp hạng sao</option>
+                      <option value="review_high">Đánh giá cao nhất</option>
+                    </select>
+                    <span
+                      class="iconify product-sort-icons"
+                      data-icon="akar-icons:chevron-down"
+                      data-width="22"
+                      data-height="22"
+                    ></span>
                   </div>
-                  <div class="product-sort-select-list">
-                    <ul>
-                      <li
-                        id="sort-mode-1"
-                        class="product-sort-select-list__item"
-                      >
-                        Đề xuất
-                      </li>
-                      <li
-                        id="sort-mode-2"
-                        class="product-sort-select-list__item"
-                      >
-                        Giá giãm dần
-                      </li>
-                      <li
-                        id="sort-mode-3"
-                        class="product-sort-select-list__item"
-                      >
-                        Giá tăng dần
-                      </li>
-                      <li
-                        id="sort-mode-4"
-                        class="product-sort-select-list__item"
-                      >
-                        Xếp hạng sao
-                      </li>
-                      <li
-                        id="sort-mode-5"
-                        class="product-sort-select-list__item"
-                      >
-                        Đánh giá cao nhất
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                </form>
                 <div class="list-product-container">
                   <div id="product-1" class="product-container">
-                    <div class="row">
-                      <div class="col-4">
-                        <div class="product-container-img">
-                          <div class="product-img"></div>
-                          <div class="product-img-warapper-button">
-                            <div class="product-img-button-prev">
-                              <span
-                                class="iconify product-img-button-icon"
-                                data-icon="akar-icons:chevron-left"
-                              ></span>
-                            </div>
-                            <div class="product-img-button-next">
-                              <span
-                                class="iconify product-img-button-icon"
-                                data-icon="akar-icons:chevron-right"
-                              ></span>
-                            </div>
+                    <a href="#">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="product-container-img">
+                            <div class="product-img"></div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-8">
-                        <div class="product-container-info">
-                          <div class="product-container-info-main">
-                            <div class="product-info-header">
-                              <h2>Khách sạn Banya Tree Lăng Cô</h2>
-                            </div>
-                            <div class="product-info-rank">
-                              <span
-                                class="iconify product-info-rank__icon"
-                                data-icon="carbon:star-filled"
-                              ></span>
-                              <span
-                                class="iconify product-info-rank__icon"
-                                data-icon="carbon:star-filled"
-                              ></span>
-                              <span
-                                class="iconify product-info-rank__icon"
-                                data-icon="carbon:star-filled"
-                              ></span>
-                              <span
-                                class="iconify product-info-rank__icon"
-                                data-icon="carbon:star-filled"
-                              ></span>
-                              <span
-                                class="iconify product-info-rank__icon"
-                                data-icon="carbon:star-filled"
-                              ></span>
-                            </div>
-                            <div class="product-info-location">
-                              <span
-                                class="iconify product-info-location-icon"
-                                data-icon="ci:location"
-                              ></span>
-                              <span> Languna Lăng Cô </span>
-                            </div>
-                            <div class="product-info-special-warapper">
-                              <div class="product-info-special">
-                                <span
-                                  class="iconify product-info-special-icon"
-                                  data-icon="akar-icons:check"
-                                ></span>
-                                <span> Quang cảnh biển </span>
+                        <div class="col-8">
+                          <div class="product-container-info">
+                            <div class="product-container-info-main">
+                              <div class="product-info-header">
+                                <h2>Khách sạn Banya Tree Lăng Cô</h2>
                               </div>
-                              <div class="product-info-special">
+                              <div class="product-info-rank">
                                 <span
-                                  class="iconify product-info-special-icon"
-                                  data-icon="akar-icons:check"
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
                                 ></span>
-                                <span> Có hồ bơi riêng </span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
                               </div>
-                            </div>
-                            <div class="product-info-rate">
-                              <strong>9/10</strong> Tuyệt vời
-                              <span>(200 đánh giá)</span>
-                            </div>
-                          </div>
-                          <div class="product-container-info-price">
-                            <div class="product-info-price">
-                              <div class="product-info-price-warapper">
-                                <div class="product-info-price__old">
-                                  12.000.000 ₫
+                              <div class="product-info-location">
+                                <span
+                                  class="iconify product-info-location-icon"
+                                  data-icon="ci:location"
+                                ></span>
+                                <span> Languna Lăng Cô </span>
+                              </div>
+                              <div class="product-info-special-warapper">
+                                <div class="product-info-special">
+                                  <span
+                                    class="iconify product-info-special-icon"
+                                    data-icon="akar-icons:check"
+                                  ></span>
+                                  <span> Quang cảnh biển </span>
                                 </div>
-                                <div class="product-info-price__deal"><span>-15%</span>
+                                <div class="product-info-special">
+                                  <span
+                                    class="iconify product-info-special-icon"
+                                    data-icon="akar-icons:check"
+                                  ></span>
+                                  <span> Có hồ bơi riêng </span>
                                 </div>
                               </div>
-                              <div class="product-info-price__current">
-                                10.000.000 ₫
+                              <div class="product-info-rate">
+                                <strong>9/10</strong> Tuyệt vời
+                                <span>(200 đánh giá)</span>
                               </div>
-                              <div class="product-info-price__sublabel">Mỗi đêm</div>
+                            </div>
+                            <div class="product-container-info-price">
+                              <div class="product-info-price">
+                                <div class="product-info-price-warapper">
+                                  <div class="product-info-price__old">
+                                    12.000.000 ₫
+                                  </div>
+                                  <div class="product-info-price__deal">
+                                    <span>-15%</span>
+                                  </div>
+                                </div>
+                                <div class="product-info-price__current">
+                                  10.000.000 ₫
+                                </div>
+                                <div class="product-info-price__sublabel">
+                                  Mỗi đêm
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
+                  </div>
+                  <div id="product-2" class="product-container">
+                    <a href="#">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="product-container-img">
+                            <div class="product-img"></div>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div class="product-container-info">
+                            <div class="product-container-info-main">
+                              <div class="product-info-header">
+                                <h2>Khách sạn Banya Tree Lăng Cô</h2>
+                              </div>
+                              <div class="product-info-rank">
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                                <span
+                                  class="iconify product-info-rank__icon"
+                                  data-icon="carbon:star-filled"
+                                ></span>
+                              </div>
+                              <div class="product-info-location">
+                                <span
+                                  class="iconify product-info-location-icon"
+                                  data-icon="ci:location"
+                                ></span>
+                                <span> Languna Lăng Cô </span>
+                              </div>
+                              <div class="product-info-special-warapper">
+                                <div class="product-info-special">
+                                  <span
+                                    class="iconify product-info-special-icon"
+                                    data-icon="akar-icons:check"
+                                  ></span>
+                                  <span> Quang cảnh biển </span>
+                                </div>
+                                <div class="product-info-special">
+                                  <span
+                                    class="iconify product-info-special-icon"
+                                    data-icon="akar-icons:check"
+                                  ></span>
+                                  <span> Có hồ bơi riêng </span>
+                                </div>
+                              </div>
+                              <div class="product-info-rate">
+                                <strong>9/10</strong> Tuyệt vời
+                                <span>(200 đánh giá)</span>
+                              </div>
+                            </div>
+                            <div class="product-container-info-price">
+                              <div class="product-info-price">
+                                <div class="product-info-price-warapper">
+                                  <div class="product-info-price__old">
+                                    12.000.000 ₫
+                                  </div>
+                                  <div class="product-info-price__deal">
+                                    <span>-15%</span>
+                                  </div>
+                                </div>
+                                <div class="product-info-price__current">
+                                  10.000.000 ₫
+                                </div>
+                                <div class="product-info-price__sublabel">
+                                  Mỗi đêm
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -690,12 +710,25 @@
           </div>
         </div>
       </div>
-
-      <!-- end body content -->
-
-      <!-- End main content -->
     </div>
+    <!-- end body content -->
+
+    <!-- End main content -->
 
     <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="/node_modules/lightpick/lightpick.js"></script>
+    <script>
+      var picker = new Lightpick({
+        field: document.getElementById("check_in"),
+        secondField: document.getElementById("check_out"),
+        singleDate: false,
+        onSelect: function (start, end) {
+          var str = "";
+          str += start ? start.format("Do MMMM YYYY") + " to " : "";
+          str += end ? end.format("Do MMMM YYYY") : "...";
+        },
+      });
+    </script>
   </body>
 </html>

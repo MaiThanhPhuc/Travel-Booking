@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="/styles/root.css" />
     <link rel="stylesheet" href="/styles/grid.css" />
     <link rel="stylesheet" href="/styles/booking.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/node_modules/lightpick/css/lightpick.css"
+    />
   </head>
   <body>
     <!-- top nav -->
@@ -47,50 +52,168 @@
               </div>
               <div class="booking-content-wrapper--block">
                 <div class="booking-content-wrapper--block--left">
-                  <div class="booking-content-wrapper--block--left__heading">
+                  <label
+                    for="booking-date"
+                    class="booking-content-wrapper--block--left__heading"
+                  >
                     Ngày
-                  </div>
-                  <div
+                  </label>
+                  <input
+                    type="text"
                     class="booking-content-wrapper--block--left__subheading"
                     id="booking-date"
-                  >
-                    14 thg 11 – 21 thg 11
-                  </div>
+                    value="14/8/21 - 13/9/21"
+                    disabled
+                  />
                 </div>
                 <div class="booking-content-wrapper--block--right">
-                  <a href=""> Chỉnh sửa </a>
+                  <button class="booking-content-edit-date" href="">
+                    Chỉnh sửa
+                  </button>
                 </div>
               </div>
+
+              <div class="booking-box-date-container">
+                <div class="booking-box-date--checkin">
+                  <div class="booking-box-checkin-wrapper">
+                    <label
+                      for="booking-box-checkin"
+                      class="booking-box-checkin__label"
+                      >NHẬN PHÒNG</label
+                    >
+                    <input
+                      type="text"
+                      id="booking-box-checkin"
+                      class="booking-box-checkin__input"
+                      placeholder="Thêm ngày"
+                    />
+                  </div>
+                  <div class="booking-box-checkin__remove active">
+                    <span class="iconify" data-icon="bi:x"></span>
+                  </div>
+                </div>
+                <div class="booking-box-date--checkout">
+                  <div class="booking-box-checkout-wrapper">
+                    <label
+                      for="booking-box-checkout"
+                      class="booking-box-checkout__label"
+                      >TRẢ PHÒNG</label
+                    >
+                    <input
+                      type="text"
+                      id="booking-box-checkout"
+                      class="booking-box-checkout__input"
+                      placeholder="Thêm ngày"
+                    />
+                  </div>
+                  <div class="booking-box-checkout__remove">
+                    <span class="iconify" data-icon="bi:x"></span>
+                  </div>
+                </div>
+              </div>
+
               <div class="booking-content-wrapper--block">
                 <div class="booking-content-wrapper--block--left">
-                  <div class="booking-content-wrapper--block--left__heading">
-                    Giờ nhận phòng
-                  </div>
-                  <div
-                    class="booking-content-wrapper--block--left__subheading"
-                    id="booking-time"
+                  <label
+                    for="booking-guesss"
+                    class="booking-content-wrapper--block--left__heading"
                   >
-                    22:00 – 00:00
-                  </div>
-                </div>
-                <div class="booking-content-wrapper--block--right">
-                  <a href=""> Chỉnh sửa </a>
-                </div>
-              </div>
-              <div class="booking-content-wrapper--block">
-                <div class="booking-content-wrapper--block--left">
-                  <div class="booking-content-wrapper--block--left__heading">
                     Khách
-                  </div>
-                  <div
+                  </label>
+                  <input
+                    type="text"
+                    disabled
                     class="booking-content-wrapper--block--left__subheading"
                     id="booking-guess"
-                  >
-                    1 khách
-                  </div>
+                    value="1 khách"
+                  />
                 </div>
                 <div class="booking-content-wrapper--block--right">
-                  <a href=""> Chỉnh sửa </a>
+                  <button class="booking-content-edit-guess" href="">
+                    Chỉnh sửa
+                  </button>
+                </div>
+              </div>
+
+              <div id="booking-box-guests" class="booking-box-guests-container">
+                <div class="booking-box-guests-number">
+                  <div class="booking-box-guests-number-warning">
+                    Vui lòng nhập tuổi trẻ em.
+                  </div>
+
+                  <div class="booking-box-guests-number-wrapper">
+                    <div class="booking-box-guests__label">Người lớn</div>
+                    <div class="booking-box-guests__btn">
+                      <div class="booking-box-guests__btn-adult-sub">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="carbon:subtract-alt"
+                        ></span>
+                      </div>
+                      <div
+                        id="booking-box-guests__count--adult"
+                        class="booking-box-guests__count--adult"
+                      >
+                        1
+                      </div>
+                      <div class="booking-box-guests__btn-adult-add">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="fluent:add-circle-24-regular"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-box-guests-number-wrapper">
+                    <div class="booking-box-guests__label">Trẻ em</div>
+                    <div class="booking-box-guests__btn">
+                      <div class="booking-box-guests__btn-child-sub">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="carbon:subtract-alt"
+                        ></span>
+                      </div>
+                      <div
+                        id="booking-box-guests__count--child"
+                        class="booking-box-guests__count--child"
+                      >
+                        0
+                      </div>
+                      <div class="booking-box-guests__btn-child-add">
+                        <span
+                          class="iconify booking-box-guests-icon"
+                          data-icon="fluent:add-circle-24-regular"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="booking-box-guests-number-wrapper__child">
+                    <select
+                      name="booking-child-age"
+                      id="booking-box-guests-age-child"
+                      class="booking-box-guests-age-child"
+                    >
+                      <option selected value="0">Dưới 1 tuổi</option>
+                      <option value="1">1 tuổi</option>
+                      <option value="2">2 tuổi</option>
+                      <option value="3">3 tuổi</option>
+                      <option value="4">4 tuổi</option>
+                      <option value="5">5 tuổi</option>
+                      <option value="6">6 tuổi</option>
+                      <option value="7">7 tuổi</option>
+                      <option value="8">8 tuổi</option>
+                      <option value="9">9 tuổi</option>
+                      <option value="10">10 tuổi</option>
+                      <option value="11">11 tuổi</option>
+                      <option value="12">12 tuổi</option>
+                      <option value="13">13 tuổi</option>
+                      <option value="14">14 tuổi</option>
+                      <option value="15">15 tuổi</option>
+                      <option value="16">16 tuổi</option>
+                      <option value="17">17 tuổi</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,151 +222,53 @@
               <div class="booking-content-wrapper--heading">
                 Phương thức thanh toán
               </div>
-              <div class="box-outline booking-payment-select">
-                <div class="booking-payment-select-left">
+              <div class="booking-content-button-container">
+                <button
+                  id="booking-payment-transfer"
+                  name="payment"
+                  class="box-outline booking-payment-transfer active"
+                >
                   <span
                     class="iconify"
-                    data-icon="bi:credit-card"
-                    data-width="35"
-                    data-height="35"
+                    data-icon="uil:transaction"
+                    data-width="30"
+                    data-height="30"
                   ></span>
-                  <div class="booking-payment-select__text">
-                    Thẻ tín dụng hoặc thẻ ghi nợ
-                  </div>
-                </div>
-                <span
-                  class="iconify booking-payment-select-icon-down"
-                  data-icon="akar-icons:chevron-down"
-                  data-width="23"
-                  data-height="23"
-                ></span>
-              </div>
-              <div class="booking-card-container">
-                <div
-                  class="
-                    booking-card__number-card-wrapper
-                    booking-input-wrapper
-                  "
+                  <div class="booking-payment-select__text">Chuyển khoản</div>
+                </button>
+                <button
+                  name="payment"
+                  id="booking-payment-paypal"
+                  class="box-outline booking-payment-paypal"
                 >
-                  <label class="booking-label" for="booking-card__number-card"
-                    >Số thẻ</label
-                  >
-                  <input
-                    type="text"
-                    name="booking-card__number-card"
-                    id="booking-card__number-card"
-                    required
-                    class="booking-input"
-                    placeholder="0000 0000 0000 0000"
-                  />
-                </div>
-                <div class="booking-card__expiration-cvv">
-                  <div
-                    class="
-                      booking-card__expiration-wrapper
-                      booking-input-wrapper
-                    "
-                  >
-                    <label class="booking-label" for="booking-card__expiration"
-                      >Ngày hết hạn</label
-                    >
-                    <input
-                      class="booking-input"
-                      type="text"
-                      name="booking-card__expiration"
-                      id="booking-card__expiration"
-                      required
-                      placeholder="MM/YY"
-                    />
-                  </div>
-                  <div class="booking-card__cvv-wrapper booking-input-wrapper">
-                    <label class="booking-label" for="booking-card__cvv"
-                      >CVV</label
-                    >
-                    <input
-                      class="booking-input"
-                      type="text"
-                      name="booking-card__cvv"
-                      id="booking-card__cvv"
-                      required
-                      placeholder="123"
-                    />
-                  </div>
-                </div>
+                  <span class="iconify" data-icon="fontisto:paypal"></span>
+                  <div class="booking-payment-select__text">Paypal</div>
+                </button>
               </div>
-              <div class="booking-zipcode-container">
-                <div class="booking-input-wrapper booking-zipcode-wrapper">
-                  <label class="booking-label" for="booking-zipcode"
-                    >ZIP code</label
-                  >
-                  <input
-                    type="text"
-                    name="booking-zipcode"
-                    id="booking-zipcode"
-                    required
-                    class="booking-input"
-                  />
-                </div>
+              <div class="booking-transfer-container active">
+                <p>
+                  Hướng dẫn thanh toán sẽ được gửi tới
+                  <strong>email</strong> của bạn. Vui lòng thanh toán trước
+                  <strong>2 ngày sau thời gian đăng kí</strong>. Quá thời hạn
+                  thanh toán trên, đơn phòng sẽ tự động bị hủy.
+                </p>
               </div>
-              <div class="booking-country-container">
-                <div class="booking-input-wrapper booking-country-wrapper">
-                  <div class="booking-country-left">
-                    <label class="booking-label" for="booking-country"
-                      >Country/region</label
-                    >
-                    <input
-                      type="text"
-                      name="booking-country"
-                      id="booking-country"
-                      required
-                      class="booking-input"
-                      disabled
-                      value="Viet Nam"
-                    />
-                  </div>
-                  <div class="booking-country-right">
-                    <span
-                      class="iconify booking-payment-select-icon-down"
-                      data-icon="akar-icons:chevron-down"
-                      data-width="23"
-                      data-height="23"
-                    ></span>
-                  </div>
+              <div class="booking-paypal-container">
+                <div class="booking-paypal-heading">
+                  Đăng nhập để sử dụng PayPal.
                 </div>
+                <a
+                  href="https://www.paypal.com/uk/home"
+                  class="booking-paypal-direct"
+                >
+                  <div class="booking-paypal-btn">
+                    <span class="iconify" data-icon="uim:paypal"></span>
+                    PayPal
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="line-space"></div>
-            <div id="booking-guess-info" class="booking-content-wrapper">
-              <div class="booking-content-wrapper--heading">
-                Thông tin liên hệ
-              </div>
-              <div class="booking-input-wrapper booking-guess-phone-wrapper">
-                <label class="booking-label" for="booking-guess-phone"
-                  >Số điện thoại</label
-                >
-                <input
-                  type="text"
-                  name="booking-guess-phone"
-                  id="booking-guess-phone"
-                  required
-                  class="booking-input"
-                  placeholder="012345678"
-                />
-              </div>
-              <div class="booking-input-wrapper booking-guess-email-wrapper">
-                <label class="booking-label" for="booking-guess-email"
-                  >Email</label
-                >
-                <input
-                  type="text"
-                  name="booking-guess-email"
-                  id="booking-guess-email"
-                  required
-                  class="booking-input"
-                  placeholder="travelbooking@email.com"
-                />
-              </div>
-            </div>
+
             <div class="line-space"></div>
             <div class="booking-content-wrapper">
               <div class="booking-content-wrapper--heading">Chính sách hủy</div>
@@ -273,7 +298,7 @@
               </div>
             </div>
             <div class="booking-content-wrapper">
-              <div class="booking-btn-pay">Xác nhận & thanh toán</div>
+              <button class="booking-btn-pay">Xác nhận & thanh toán</button>
             </div>
           </div>
         </div>
@@ -375,6 +400,22 @@
         </div>
       </div>
     </div>
+
+    <script src="/js/booking.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="/node_modules/lightpick/lightpick.js"></script>
+    <script>
+      var picker = new Lightpick({
+        field: document.getElementById("booking-box-checkin"),
+        secondField: document.getElementById("booking-box-checkout"),
+        singleDate: false,
+        onSelect: function (start, end) {
+          var str = "";
+          str += start ? start.format("Do MMMM YYYY") + " to " : "";
+          str += end ? end.format("Do MMMM YYYY") : "...";
+        },
+      });
+    </script>
   </body>
   <footer id="footer"></footer>
 </html>
