@@ -160,7 +160,12 @@
 .booking-payment-select:hover {
   outline: 1px solid rgba(0, 0, 0, 0.7);
 }
-
+#booking-box-price__discount-total,
+#booking-box-price__fee-service-total,
+#booking-move-price__room-price,
+#booking-move-price__days {
+  display: inline-block;
+}
 .booking-input {
   outline: 0;
   border: 0;
@@ -338,7 +343,8 @@
   visibility: hidden;
   opacity: 0;
 }
-.booking-box-price__total-total,
+
+#booking-box-price__total-total,
 .booking-move-price__total {
   font-size: 15px;
   font-weight: 500;

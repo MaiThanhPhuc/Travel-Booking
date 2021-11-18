@@ -355,17 +355,31 @@
   height: 18px;
   margin-right: 8px;
 }
-
+.filter-product-btn{
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 10px;
+  width: 40%;
+  margin-top: 16px ;
+  text-align: center;
+  color: #fff;
+}
+.filter-product-btn:hover{
+  background-color: var(--primary-hover);
+  cursor: pointer;
+}
 .filter-product-header {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin: 16px 0;
 }
 .filter-product-label {
   font-size: 14px;
   font-weight: 450;
   margin: 20px 0px 16px 0px;
 }
+[id*="type-"] + label,
+[id*="sort-"] + label,
 [id*="rank-"] + label,
 [id*="budget-"] + label,
 [id*="popular-"] + label {
@@ -493,10 +507,10 @@ input:focus {
 .product-container-img {
   position: relative;
 }
-.product-img {
+.product-img img{
+  object-fit: cover;
   position: relative;
   border-radius: 10px 0 0 10px;
-  background-image: url(/images/hotel.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -529,10 +543,20 @@ input:focus {
   cursor: pointer;
   background-color: rgba(0, 11, 38, 0.72);
 }
+.product-container-info-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .product-img-button-icon {
   color: #fff;
   height: 15px;
   width: 15px;
+}
+.product-info-room-type{
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 60px;
 }
 .product-container-info {
   display: flex;
@@ -553,7 +577,7 @@ input:focus {
   height: 15px;
 }
 .product-info-location {
-  margin-bottom: 22px;
+  margin-bottom: 4px;
   font-size: 14px;
   font-weight: 450;
   display: flex;
@@ -584,11 +608,13 @@ input:focus {
 }
 .product-info-price {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   transform: translateX(-20%);
 }
 .product-info-price__sublabel {
+  font-size: 13px;
+  font-weight: 300;
   text-align: end;
 }
 .product-info-price__old {

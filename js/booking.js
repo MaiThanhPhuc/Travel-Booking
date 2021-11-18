@@ -41,8 +41,6 @@ $(".booking-content-edit-date").click(function (e) {
 $(".booking-content-edit-date").click(function (e) {
   $(".booking-box-date-container").addClass("active");
 });
-var temp = document.getElementById("booking-box-checkin");
-console.log(temp);
 
 //guess
 
@@ -119,3 +117,7 @@ $(".booking-box-guests__btn-child-sub").click(function (e) {
     document.getElementById("booking-guess").value = quantity + " Khách";
   }
 });
+// total money
+
+
+

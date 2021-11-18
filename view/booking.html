@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="/styles/booking.css" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="/node_modules/lightpick/css/lightpick.css"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
   </head>
   <body>
     <!-- top nav -->
@@ -61,8 +61,8 @@
                   <input
                     type="text"
                     class="booking-content-wrapper--block--left__subheading"
-                    id="booking-date"
-                    value="14/8/21 - 13/9/21"
+                    id="booking-checkin"
+                    value="25/11/2021 - 27/11/2021"
                     disabled
                   />
                 </div>
@@ -70,45 +70,6 @@
                   <button class="booking-content-edit-date" href="">
                     Chỉnh sửa
                   </button>
-                </div>
-              </div>
-
-              <div class="booking-box-date-container">
-                <div class="booking-box-date--checkin">
-                  <div class="booking-box-checkin-wrapper">
-                    <label
-                      for="booking-box-checkin"
-                      class="booking-box-checkin__label"
-                      >NHẬN PHÒNG</label
-                    >
-                    <input
-                      type="text"
-                      id="booking-box-checkin"
-                      class="booking-box-checkin__input"
-                      placeholder="Thêm ngày"
-                    />
-                  </div>
-                  <div class="booking-box-checkin__remove active">
-                    <span class="iconify" data-icon="bi:x"></span>
-                  </div>
-                </div>
-                <div class="booking-box-date--checkout">
-                  <div class="booking-box-checkout-wrapper">
-                    <label
-                      for="booking-box-checkout"
-                      class="booking-box-checkout__label"
-                      >TRẢ PHÒNG</label
-                    >
-                    <input
-                      type="text"
-                      id="booking-box-checkout"
-                      class="booking-box-checkout__input"
-                      placeholder="Thêm ngày"
-                    />
-                  </div>
-                  <div class="booking-box-checkout__remove">
-                    <span class="iconify" data-icon="bi:x"></span>
-                  </div>
                 </div>
               </div>
 
@@ -346,13 +307,12 @@
               <div class="booking-move-price-detail-heading">Chi tiết giá</div>
               <div class="booking-move-price-detail-content">
                 <div class="booking-move-price-detail-content-wrapper">
-                  <div class="booking-move-price__label">
-                    <span class="booking-move-price__room-price">$15</span>
+                  <div class="booking-move-price__label">$<div id="booking-move-price__room-price">15</div>
                     x
-                    <span class="booking-move-price__days">2 đêm</span>
+                    <div id="booking-move-price__days">2 đêm</div>
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__room-price-total">$30</span>
+                    $<span id="booking-box-price__room-price-total">30</span>
                   </div>
                 </div>
                 <div class="booking-move-price-detail-content-wrapper">
@@ -362,7 +322,7 @@
                     >
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__fee-service-total">$5</span>
+                    $<div id="booking-box-price__fee-service-total">5</div>
                   </div>
                 </div>
                 <div
@@ -374,16 +334,14 @@
                   <div class="booking-move-price__label">
                     <span class="booking-move-price__discount">Giảm giá</span>
                   </div>
-                  <div class="booking-box-price__label">
-                    <span class="booking-box-price__discount-total">$-10</span>
+                  <div class="booking-box-price__label">$<div id="booking-box-price__discount-total">-10</div>
                   </div>
                 </div>
                 <div class="booking-move-price-detail-content-wrapper">
                   <div class="booking-move-price__label">
                     <span class="booking-move-price__total">Tổng</span>
                   </div>
-                  <div class="booking-box-price__label">
-                    <span class="booking-box-price__total-total">$35</span>
+                  <div class="booking-box-price__label">$<span id="booking-box-price__total-total">35</span>
                   </div>
                 </div>
               </div>
@@ -394,20 +352,52 @@
     </div>
 
     <script src="/js/booking.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="/node_modules/lightpick/lightpick.js"></script>
+    <script src="/node_modules/moment/moment.js"></script>
     <script>
-      var picker = new Lightpick({
-        field: document.getElementById("booking-box-checkin"),
-        secondField: document.getElementById("booking-box-checkout"),
-        singleDate: false,
-        onSelect: function (start, end) {
-          var str = "";
-          str += start ? start.format("YYYY MMMM Do") + " to " : "";
-          str += end ? end.format("YYYY MMMM Do") : "...";
+      var format = "DD-MM-YYYY";
+      var today = moment();
+      today.subtract(1, "days").format(format);
+      
+      const disallowedDates = [["2001-01-01", today]];
+      var picker = new Litepicker({
+        element: document.getElementById("booking-checkin"),
+        singleMode: false,
+        numberOfColumns: 2,
+        numberOfMonths: 2,
+        format: "DD/MM/YYYY",
+        lockDays: disallowedDates,
+        autoApply: false,
+        tooltipText: {
+          one: "night",
+          other: "nights",
+        },
+        tooltipNumber: (totalDays) => {
+          return totalDays;
         },
       });
-      console.log(picker);
+
+      $(".booking-content-edit-date").click(function (e) {
+        picker.show();
+        var date = 0;
+
+        picker.on("selected", (date1, date2) => {
+          var start = picker.getStartDate().getTime();
+          var end = picker.getEndDate().getTime();
+          const oneDay = 1000 * 60 * 60 * 24;
+          const diffInTime = date2.getTime() - date1.getTime();
+          const diffInDays = Math.round(diffInTime / oneDay);
+          document.getElementById("booking-move-price__days").innerHTML =
+            diffInDays + 1 + " đêm";
+          var price_room = parseFloat(
+            document.getElementById("booking-move-price__room-price").innerHTML
+          );
+          var fee = parseFloat(
+            document.getElementById("booking-box-price__fee-service-total").innerHTML
+          );
+            document.getElementById("booking-box-price__total-total").innerHTML=price_room*(diffInDays+1)+fee;
+            document.getElementById("booking-box-price__room-price-total").innerHTML=price_room*(diffInDays+1);
+        });
+      });
     </script>
   </body>
   <footer id="footer"></footer>

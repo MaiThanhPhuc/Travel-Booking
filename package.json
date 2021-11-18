@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "lightpick": "^1.6.2"
+    "litepicker": "^2.0.12",
+    "moment": "^2.29.1"
   },
   "devDependencies": {},
   "scripts": {
