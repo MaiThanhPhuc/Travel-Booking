@@ -347,14 +347,12 @@
               <div class="booking-move-price-detail-content">
                 <div class="booking-move-price-detail-content-wrapper">
                   <div class="booking-move-price__label">
-                    <span class="booking-move-price__room-price">760.000₫</span>
+                    <span class="booking-move-price__room-price">$15</span>
                     x
                     <span class="booking-move-price__days">2 đêm</span>
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__room-price-total"
-                      >1.520.000₫</span
-                    >
+                    <span class="booking-box-price__room-price-total">$30</span>
                   </div>
                 </div>
                 <div class="booking-move-price-detail-content-wrapper">
@@ -364,9 +362,7 @@
                     >
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__fee-service-total"
-                      >100.000₫</span
-                    >
+                    <span class="booking-box-price__fee-service-total">$5</span>
                   </div>
                 </div>
                 <div
@@ -379,9 +375,7 @@
                     <span class="booking-move-price__discount">Giảm giá</span>
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__discount-total"
-                      >-380.000₫</span
-                    >
+                    <span class="booking-box-price__discount-total">$-10</span>
                   </div>
                 </div>
                 <div class="booking-move-price-detail-content-wrapper">
@@ -389,9 +383,7 @@
                     <span class="booking-move-price__total">Tổng</span>
                   </div>
                   <div class="booking-box-price__label">
-                    <span class="booking-box-price__total-total"
-                      >1.620.000₫</span
-                    >
+                    <span class="booking-box-price__total-total">$35</span>
                   </div>
                 </div>
               </div>
@@ -411,10 +403,11 @@
         singleDate: false,
         onSelect: function (start, end) {
           var str = "";
-          str += start ? start.format("Do MMMM YYYY") + " to " : "";
-          str += end ? end.format("Do MMMM YYYY") : "...";
+          str += start ? start.format("YYYY MMMM Do") + " to " : "";
+          str += end ? end.format("YYYY MMMM Do") : "...";
         },
       });
+      console.log(picker);
     </script>
   </body>
   <footer id="footer"></footer>

@@ -109,5 +109,5 @@ var room_price = parseFloat(
 console.log(room_price);
 
 var y = 1000;
-y = y.toLocaleString("vi", {style: "currency", currency: "VND"});
+y = y.toLocaleString("en-US", {style: "currency", currency: "USD"});
 console.log(y);

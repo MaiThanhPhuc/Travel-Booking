@@ -620,12 +620,14 @@ input:focus {
 }
 
 .image__bigsize img {
+  object-fit: cover;
   cursor: pointer;
   width: 100%;
   height: 360px;
   border-radius: 10px 0 0 0;
 }
 .image-sub__smallsize img {
+  object-fit: cover;
   cursor: pointer;
   width: 98%;
   height: 178px;
