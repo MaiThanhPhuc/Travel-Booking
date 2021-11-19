@@ -285,7 +285,7 @@
                       style="color: #ee6c4d"
                     ></span>
                     <div class="booking-rating">
-                      <strong> 4/5 </strong>
+                      <strong> 9/10 </strong>
                       (50 đánh giá)
                     </div>
                   </div>
@@ -346,6 +346,12 @@
                   </div>
                   <div class="booking-box-price__label">
                     $<span id="booking-box-price__total-total">35</span>
+                    <input
+                      value="35"
+                      id="total_money"
+                      type="text"
+                      style="display: none"
+                    />
                   </div>
                 </div>
               </div>
@@ -380,7 +386,7 @@
           other: "nights",
         },
         tooltipNumber: (totalDays) => {
-          return totalDays;
+          return totalDays - 1;
         },
       });
 
@@ -395,7 +401,7 @@
           const diffInTime = date2.getTime() - date1.getTime();
           const diffInDays = Math.round(diffInTime / oneDay);
           document.getElementById("booking-move-price__days").innerHTML =
-            diffInDays + 1 + " đêm";
+            diffInDays + " đêm";
           var price_room = parseFloat(
             document.getElementById("booking-move-price__room-price").innerHTML
           );
@@ -404,10 +410,14 @@
               .innerHTML
           );
           document.getElementById("booking-box-price__total-total").innerHTML =
-            price_room * (diffInDays + 1) + fee;
+            price_room * diffInDays + fee;
+
+          document.getElementById("total_money").value =
+            price_room * diffInDays + fee;
+
           document.getElementById(
             "booking-box-price__room-price-total"
-          ).innerHTML = price_room * (diffInDays + 1);
+          ).innerHTML = price_room * diffInDays;
         });
       });
     </script>
