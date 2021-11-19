@@ -285,7 +285,7 @@
                       style="color: #ee6c4d"
                     ></span>
                     <div class="booking-rating">
-                      <strong> 9/10 </strong>
+                      <strong> 4/5 </strong>
                       (50 đánh giá)
                     </div>
                   </div>
@@ -362,7 +362,11 @@
       var today = moment();
       today.subtract(1, "days").format(format);
 
-      const disallowedDates = [["2001-01-01", today]];
+      const disallowedDates = [
+        ["2001-01-01", today],
+        "2021-12-1",
+        ["2021-11-21", "2021-11-22"],
+      ];
       var picker = new Litepicker({
         element: document.getElementById("booking-checkin"),
         singleMode: false,
@@ -405,6 +409,79 @@
             "booking-box-price__room-price-total"
           ).innerHTML = price_room * (diffInDays + 1);
         });
+      });
+    </script>
+    <script>
+      $(".booking-box-guests__btn-adult-add").click(function (e) {
+        var temp = parseInt(
+          document.getElementById("booking-box-guests__count--adult").innerHTML
+        );
+        var quantity = parseInt(document.getElementById("booking-guess").value);
+
+        if (temp < 5) {
+          temp += 1;
+          quantity += 1;
+          document.getElementById(
+            "booking-box-guests__count--adult"
+          ).innerHTML = temp;
+          document.getElementById("booking-guess").value = quantity + " Khách";
+        }
+      });
+      $(".booking-box-guests__btn-adult-sub").click(function (e) {
+        var quantity = parseInt(document.getElementById("booking-guess").value);
+        var temp = parseInt(
+          document.getElementById("booking-box-guests__count--adult").innerHTML
+        );
+        if (temp > 1) {
+          temp -= 1;
+          quantity -= 1;
+          document.getElementById(
+            "booking-box-guests__count--adult"
+          ).innerHTML = temp;
+          document.getElementById("booking-guess").value = quantity + " Khách";
+        }
+      });
+      $(".booking-box-guests__btn-child-add").click(function (e) {
+        var temp = parseInt(
+          document.getElementById("booking-box-guests__count--child").innerHTML
+        );
+        var quantity = parseInt(document.getElementById("booking-guess").value);
+        if (temp < 5) {
+          temp += 1;
+          quantity += 1;
+          document.getElementById(
+            "booking-box-guests__count--child"
+          ).innerHTML = temp;
+          document.querySelector(
+            ".booking-box-guests-number-warning"
+          ).className += " active";
+          document.querySelector(".booking-box-guests-age-child").className +=
+            " active";
+          document.getElementById("booking-guess").value = quantity + " Khách";
+        }
+      });
+      $(".booking-box-guests__btn-child-sub").click(function (e) {
+        var temp = parseInt(
+          document.getElementById("booking-box-guests__count--child").innerHTML
+        );
+        var quantity = parseInt(document.getElementById("booking-guess").value);
+        if (temp > 0) {
+          temp -= 1;
+          quantity -= 1;
+          document.getElementById(
+            "booking-box-guests__count--child"
+          ).innerHTML = temp;
+          document.querySelector(
+            ".booking-box-guests-number-warning"
+          ).className = document
+            .querySelector(".booking-box-guests-number-warning")
+            .className.replace(" active", "");
+          document.querySelector(".booking-box-guests-age-child").className =
+            document
+              .querySelector(".booking-box-guests-age-child")
+              .className.replace(" active", "");
+          document.getElementById("booking-guess").value = quantity + " Khách";
+        }
       });
     </script>
   </body>
